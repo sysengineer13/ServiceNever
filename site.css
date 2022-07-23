@@ -155,7 +155,7 @@ html {
   
   .box {
       width: 50px;
-      height: 50px;
+      height: 10px;
       border: 1px #000 solid;
       right: 200px;
       background: red;
