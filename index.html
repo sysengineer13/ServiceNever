@@ -16,7 +16,8 @@
 </script>
 </head>
 <body>
-    <div style="padding:50px">
+
+    <div class="container">
     <img src="/logo.png" alt="..." height="150"><br><br>
 <a style="font-size:20px;" href="https://github.com/sysengineer13/HelpDesk-Ticket-System.git">HelpDesk-Ticket-System.Git</a>
 
@@ -96,22 +97,22 @@
             switch (edge) {
                 case "left":
                     $(elem).css({
-                        left: mouse.pageX + 5
+                        left: mouse.pageX + 50
                     });
                     break;
                 case "right":
                     $(elem).css({
-                        left: mouse.pageX - width - 20
+                        left: mouse.pageX - width - 50
                     });
                     break;
                 case "top":
                     $(elem).css({
-                        top: mouse.pageY + 5
+                        top: mouse.pageY + 50
                     });
                     break;
                 case "bottom":
                     $(elem).css({
-                        top: mouse.pageY - height - 20
+                        top: mouse.pageY - height - 50
                     });
                     break;
             }
