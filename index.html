@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <div style="padding:50px">
+    <img src="/logo.png" alt="..." height="150">
+
+
+    <h1>Submit a Ticket</h1>
+   <h3>If there are any issues with the form, ask for Tyler <a href="https://discord.gg/4Y9g9yzyBq">here</a></h3>
+    <form >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone"><br><br>
+
+        <label for="dept">Department:</label>
+        <select id="dept" name="dept">
+            <option value="it">IT</option>
+
+            <option value="sales">Sales</option>
+            <option value="hr">HR</option>
+            <option value="finance">Finance</option>
+        </select> <br /><br />
+
+
+        <label for="priority">Priority: </label>
+        <select id="priority" name="priority">
+            <option value="volvo">Will die if not done ASAP</option>
+            <option value="saab">IDK I'm going on lunch right now</option>
+
+        </select> <br /><br />
+        <label for="problem">Description of Problem:</label><br />
+        <textarea rows="4" cols="50"></textarea><br><br>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <section class="container">
+            <div class="box-bounds">
+
+
+                <button class="buttonFLASH" style="background-color:red;color:white;padding:20px;" onclick="window.print()">Submit</button>
+          
+
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    
+
+       
+
+
+
+    </form>
+    <a class="buttonhover" href="/index.html" >
+        <span class="submit"href="/index.html">Submit</span>
+        <span class="cancel" href="/index.html">Cancel</span>
+    </a>
+</div>
+    <script>
+        $(document).ready(function () {
+            $(".box-bounds").mouseenter(function (e) {
+                closestEdge(e, this);
+            });
+        });
+
+        function moveDiv(mouse, edge, elem) {
+            const width = $(elem).outerWidth();
+            const height = $(elem).outerHeight();
+
+            switch (edge) {
+                case "left":
+                    $(elem).css({
+                        left: mouse.pageX + 5
+                    });
+                    break;
+                case "right":
+                    $(elem).css({
+                        left: mouse.pageX - width - 20
+                    });
+                    break;
+                case "top":
+                    $(elem).css({
+                        top: mouse.pageY + 5
+                    });
+                    break;
+                case "bottom":
+                    $(elem).css({
+                        top: mouse.pageY - height - 20
+                    });
+                    break;
+            }
+        }
+
+        function closestEdge(mouse, elem) {
+            let elemBounding = elem.getBoundingClientRect();
+
+            let elementLeftEdge = elemBounding.left;
+            let elementTopEdge = elemBounding.top;
+            let elementRightEdge = elemBounding.right;
+            let elementBottomEdge = elemBounding.bottom;
+
+            let mouseX = mouse.pageX;
+            let mouseY = mouse.pageY;
+
+            let topEdgeDist = Math.abs(elementTopEdge - mouseY);
+            let bottomEdgeDist = Math.abs(elementBottomEdge - mouseY);
+            let leftEdgeDist = Math.abs(elementLeftEdge - mouseX);
+            let rightEdgeDist = Math.abs(elementRightEdge - mouseX);
+
+            let min = Math.min(topEdgeDist, bottomEdgeDist, leftEdgeDist, rightEdgeDist);
+
+            let position;
+
+            switch (min) {
+                case leftEdgeDist:
+                    position = "left";
+                    break;
+                case rightEdgeDist:
+                    position = "right";
+                    break;
+                case topEdgeDist:
+                    position = "top";
+                    break;
+                case bottomEdgeDist:
+                    position = "bottom";
+                    break;
+            }
+
+            moveDiv(mouse, position, elem);
+        }</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+html {
+    font-size: 14px;
+  }
+  
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+  body {
+    margin-bottom: 60px;
+  }
+  
+  
+  
+  .buttonFLASH {
+      background-color: #004A7F;
+      width: 100% -webkit-border-radius: 10px;
+      border-radius: 10px;
+      border: none;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: Arial;
+      font-size: 24px;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      -webkit-animation: glowing 1500ms infinite;
+      -moz-animation: glowing 1500ms infinite;
+      -o-animation: glowing 1500ms infinite;
+      animation: glowing 1500ms infinite;
+  }
+  
+  
+  
+  @-webkit-keyframes glowing {
+  
+      0% {
+          background-color: #B20000;
+          -webkit-box-shadow: 0 0 3px #B20000;
+      }
+  
+  
+  
+      50% {
+          background-color: #FF0000;
+          -webkit-box-shadow: 0 0 40px #FF0000;
+      }
+  
+  
+  
+      100% {
+          background-color: #B20000;
+          -webkit-box-shadow: 0 0 3px #B20000;
+      }
+  }
+  
+  
+  
+  @-moz-keyframes glowing {
+  
+      0% {
+          background-color: #B20000;
+          -moz-box-shadow: 0 0 3px #B20000;
+      }
+  
+  
+  
+      50% {
+          background-color: #FF0000;
+          -moz-box-shadow: 0 0 40px #FF0000;
+      }
+  
+  
+  
+      100% {
+          background-color: #B20000;
+          -moz-box-shadow: 0 0 3px #B20000;
+      }
+  }
+  
+  
+  
+  @-o-keyframes glowing {
+  
+      0% {
+          background-color: #B20000;
+          box-shadow: 0 0 3px #B20000;
+      }
+  
+  
+  
+      50% {
+          background-color: #FF0000;
+          box-shadow: 0 0 40px #FF0000;
+      }
+  
+  
+  
+      100% {
+          background-color: #B20000;
+          box-shadow: 0 0 3px #B20000;
+      }
+  }
+  
+  
+  
+  @keyframes glowing {
+  
+      0% {
+          background-color: #B20000;
+          box-shadow: 0 0 3px #B20000;
+      }
+  
+  
+  
+      50% {
+          background-color: #FF0000;
+          box-shadow: 0 0 40px #FF0000;
+      }
+  
+  
+  
+      100% {
+          background-color: #B20000;
+          box-shadow: 0 0 3px #B20000;
+      }
+  }
+  
+  
+  
+  
+  
+  
+  
+  .container {
+      margin: 0 auto;
+  
+      width: 100%;
+  
+      position: relative;
+  }
+  
+  .box-bounds {
+      padding: 10px;
+      position: absolute;
+  }
+  
+  .box {
+      width: 50px;
+      height: 50px;
+      border: 1px #000 solid;
+      right: 200px;
+      background: red;
+      transition: 0.5s;
+  }
+  
+  
+  
+  .buttonhover {
+      font-size:16px;
+      background-color:black;
+      color:white;
+      padding:5px;
+  border:none;
+  
+  }
+  
+  .buttonhover:hover {
+      font-size:16px;
+      padding:5px;
+  
+      background-color:green;
+  
+  border:none;
+  
+  }
+  
+  
+  .buttonhover .cancel {
+      display: none;
+    }
+    
+    .buttonhover:hover .submit {
+      display: none;
+    }
+    
+    .buttonhover:hover .cancel {
+      display: inline;
+    }
