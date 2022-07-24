@@ -32,24 +32,28 @@
     <div class="navcontainer">
     <a class="navlinks"  href="http://sharepointlist.com/">   <img src="http://sharepointlist.com/logo.png" alt="..." height="150"></a>
     <a class="navlinks" style="padding-left:20px; font-size:20px;"  href="http://sharepointlist.com/">Submit a Ticket</a>
-
-
-    
-
     <a class="navlinks" href="https://github.com/sysengineer13/HelpDesk-Ticket-System.git">HelpDesk-Ticket-System.Git</a>
+    <a class="navlinks" href="#" onclick="toggleMagicWordGif()">Log In</a>
 
-</div>
-<div style="padding-top:20px;padding-left:50px;">
-<input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
-<div id="welcomeDiv"  style="display:none;" class="answer_list" > 
 
-<p>Download Status of a Virus:</p>
+    <div style="padding-top:20px;padding-left:50px;">
+        <input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
+        <div id="welcomeDiv"  style="display:none;" class="answer_list" > 
+        
+        <p>Download Status of a Virus:</p>
+        
+        <div id="Progress_Status">
+          <div id="myprogressBar"></div>
+        </div>
+        </div>
+        </div>
+</div>
 
-<div id="Progress_Status">
-  <div id="myprogressBar"></div>
-</div>
-</div>
-</div>
+    <div id="askNicely" style="display: none;">
+        <img src="images/jurrasic-park-samuel-l-jackson.gif"  alt="You didn't say the magic word!"/>
+    </div>
+
+
     <div class="container">
   
 
@@ -59,19 +63,19 @@
    <h3>If there are any issues with the form, <a href="https://discord.gg/7NtgNbc46p">click here</a> & ask for Tyler </h3>
     <form >
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
+        <input type="text" id="name" name="name" placeholder="jef"><br><br>
 
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email"><br><br>
+        <input type="text" id="email" name="email" placeholder="example@sharepointlist.com"><br><br>
 
 
         <label for="phone">Phone:</label>
-        <input type="text" id="phone" name="phone"><br><br>
+        <input type="tel" id="phone" name="phone"><br><br>
 
         <label for="dept">Department:</label>
         <select id="dept" name="dept">
             <option value="it">IT</option>
-
+            <option value="marketing">Marketing</option>
             <option value="sales">Sales</option>
             <option value="hr">HR</option>
             <option value="finance">Finance</option>
@@ -82,10 +86,11 @@
         <select id="priority" name="priority">
             <option value="die">Will die if not done ASAP</option>
             <option value="idkbruh">IDK I'm going on lunch right now</option>
+            <option value="world">The world will end if not fixed immediately</option>
 
         </select> <br /><br />
         <label for="problem">Description of Problem:</label><br />
-        <textarea rows="4" cols="50"></textarea><br><br>
+        <textarea id="problem" name="problem" rows="4" cols="50"></textarea><br><br>
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -93,7 +98,9 @@
             <div class="box-bounds">
 
 
+
                 <button class="buttonFLASH" style="background-color:red;color:white;padding:20px;" onclick="prompt('Are you sure you want to delete this ticket?');return true;">Submit</button>
+
           
 
             </div>
@@ -112,9 +119,9 @@
 
 
     </form>
-    <a class="buttonhover" href="/index.html" >
-        <span class="submit"href="/index.html">Submit</span>
-        <span class="cancel" href="/index.html">Cancel</span>
+    <a class="buttonhover" href="http://sharepointlist.com/" >
+        <span class="submit"href="http://sharepointlist.com/">Submit</span>
+        <span class="cancel" href="http://sharepointlist.com/">Cancel</span>
     </a>
     <br><br>
     <p></p>
@@ -122,8 +129,14 @@
 </div>
     <script>
         $(document).ready(function () {
+            let audio = (typeof(Audio) !== 'undefined') ? new Audio("youredone.mp3") : null;
             $(".box-bounds").mouseenter(function (e) {
                 closestEdge(e, this);
+                try {
+                    if (audio) {
+                        audio.play();
+                    }
+                } catch(e) {}
             });
         });
 
@@ -209,5 +222,15 @@
                   }
                 }
              }</script>
+
+    <script>
+        function toggleMagicWordGif() {
+            if (document.getElementById('askNicely').style.display === 'none') {
+                document.getElementById('askNicely').style.display = 'block';
+            } else {
+                document.getElementById('askNicely').style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
