@@ -107,7 +107,7 @@
         <section class="container">
             <div class="box-bounds">
 
-                <button class="buttonFLASH" style="background-color:red;color:white;padding:20px;" onclick="prompt('Are you sure you want to delete this ticket?');window.location.reload();" tabindex="-1">Submit</button>
+                <button id="submit" class="buttonFLASH" style="background-color:red;color:white;padding:20px;" tabindex="-1">Submit</button>
 
           
 
@@ -138,8 +138,13 @@
 </div>
     <script>
         $(document).ready(function () {
+            let numMoves = 0;
+            let timeoutDone = false;
+
             let audio = (typeof(Audio) !== 'undefined') ? new Audio("youredone.mp3") : null;
             $(".box-bounds").mouseenter(function (e) {
+                if (numMoves == 0) setTimeout(() => timeoutDone = true, 15 * 1000);
+                if (++numMoves > 25 && timeoutDone) return;
                 closestEdge(e, this);
                 try {
                     if (audio) {
@@ -147,6 +152,10 @@
                     }
                 } catch(e) {}
             });
+        });
+
+        document.getElementById("submit").addEventListener("click", function () {
+            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
         });
 
         function moveDiv(mouse, edge, elem) {
@@ -185,8 +194,8 @@
             let elementRightEdge = elemBounding.right;
             let elementBottomEdge = elemBounding.bottom;
 
-            let mouseX = mouse.pageX;
-            let mouseY = mouse.pageY;
+            let mouseX = mouse.clientX;
+            let mouseY = mouse.clientY;
 
             let topEdgeDist = Math.abs(elementTopEdge - mouseY);
             let bottomEdgeDist = Math.abs(elementBottomEdge - mouseY);
