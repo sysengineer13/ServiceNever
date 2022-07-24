@@ -85,7 +85,7 @@
 
         </select> <br /><br />
         <label for="problem">Description of Problem:</label><br />
-        <textarea rows="4" cols="50"></textarea><br><br>
+        <textarea id="problem" name="problem" rows="4" cols="50"></textarea><br><br>
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -122,8 +122,14 @@
 </div>
     <script>
         $(document).ready(function () {
+            let audio = (typeof(Audio) !== 'undefined') ? new Audio("engineer_no01.mp3") : null;
             $(".box-bounds").mouseenter(function (e) {
                 closestEdge(e, this);
+                try {
+                    if (audio) {
+                        audio.play();
+                    }
+                } catch(e) {}
             });
         });
 
