@@ -19,7 +19,7 @@ html {
   
   .navlinks{
     font-size:18px;
-
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
     padding-right:20px;
     text-decoration: none;
   }
