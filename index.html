@@ -43,31 +43,39 @@
     </style>
   </head>
   <body>
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light navcontainer">
+        <div class="navcontainer text-center">
+            <a class="navlinks" href="https://sharepointlist.com/">
+          <img class="img-fluid" style="padding:10px;" src="images/banner.png" alt="ServiceNever" >  </a>
+        </div>
+        
+  
+          </div>
+          </nav>
+
 
   <!-- Navigation -->
+  <center>
     <div class="navcontainer">
-        <a class="navlinks" href="https://sharepointlist.com/">
-          <img src="https://sharepointlist.com/logo.png" alt="Service Never Stoned Paperclip" height="125">
-        </a>
-        <img src="images/wordart(4).png" alt="ServiceNever" height="100">
-        <br>
         <a class="navlinks" href="https://github.com/sysengineer13/ServiceNever" target="_blank">ServiceNever.Git</a>
-        <a class="navlinks" href="#" onclick="toggleMagicWordGif()">Log In</a>
+      
         <div class="dropdown navlinks">
           <button class="dropbtn">Helpful Resources</button>
-
           <div class="dropdown-content">
             <a href="https://sharepointlist.com/" target="_blank">Submit a Ticket</a>
             <a href="https://www.google.com/" target="_blank">Contact Support</a>
             <a href="https://downloadmoreram.com/" target="_blank">Download RAM</a>
-            <a href="#" onclick="toggleMagicWordGif()">Restart my Computer</a>
-            <div id="askNicely" style="display: none;">
+            <a href="#" onclick="toggleONOFF()">Restart my Computer</a>
+            <div id="OnOff" style="display: none;">
               <img src="images/off-on.gif" height="300" alt="Have you tried turning it off & on?" />
             </div>
+              <a class="navlinks" href="#" onclick="toggleMagicWordGif()">Log In</a>
           </div>
 
         </div>
       </div>
+    </center>
   <!-- Navigation -->
 
 
@@ -77,7 +85,7 @@
 
 
    <!-- Download Virus & Login GIF-->
-
+   <div class="container">
     <div style="padding-top:20px;padding-left:50px;">
         <input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
         <div id="welcomeDiv" style="display:none;" class="answer_list">
@@ -94,15 +102,15 @@
       <div id="askNicely" style="display: none;">
         <img src="images/jurrasic-park-samuel-l-jackson.gif" alt="You didn't say the magic word!" />
       </div>
-
+    </div>
     <!-- Download Virus & Login GIF-->
 
 
 
    <!-- Submit a Ticket Form: Left Side -->
-   <div class="jumbotron" style="padding-left:50px;padding-right:50px;padding-top:20px;padding-bottom:70px;">
+   <div class="container" style="padding-top:20px;padding-bottom:70px;">
     <div class="row">
-      <div class="align-self-center col-xl-8 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+      <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
         <h1>Submit a Ticket</h1>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="jef">
@@ -141,7 +149,7 @@
         <br>
         <br>
       </div>
-    </div>
+
    <!-- Submit a Ticket Form: Left Side -->
 
 
@@ -152,7 +160,7 @@
         </div>
       </section>
 
-      <div style="padding-left:20px;padding-top:20px;">
+      <div style="padding-left:50px;padding-top:25px;">
         <button class="buttonhover" onclick="location=' https://lmgtfy.app/?q=' + encodeURIComponent(document.getElementById('problem').value);">
           <span class="submit" href="http://sharepointlist.com/">Submit</span>
           <span class="cancel" href="http://sharepointlist.com/">Cancel</span>
@@ -166,24 +174,28 @@
 
 
  <!-- Right Side -->
-       <div class="align-self-center col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+       <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
          <CENTER>
 
          </CENTER>
        </div>
     </div>
 </div>
+
+</div>
  <!-- Right Side -->
 
 
  <!-- Footer -->
  <footer>
+    <center>
     <a href="https://sociall.link/sysengineer">
         <img alt="microwave edge" src="images/Microwave Edge.png" height="100" />
       </a>
     <span style="padding-left:20px;padding-right:20px;">If there are any issues with the form, <a href="https://discord.gg/7NtgNbc46p">click here</a> & ask for Tyler.</span>
     <img class="navlinks" alt="best viewed with" src="images/best-viewed.jpg">
-  </footer>
+</center>  
+</footer>
  <!-- Footer -->
 
 
@@ -321,5 +333,14 @@
             }
         }
     </script>
+        <script>
+            function toggleONOFF() {
+                if (document.getElementById('OnOff').style.display === 'none') {
+                    document.getElementById('OnOff').style.display = 'block';
+                } else {
+                    document.getElementById('OnOff').style.display = 'none';
+                }
+            }
+        </script>
 </body>
 </html>
