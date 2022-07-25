@@ -20,17 +20,30 @@
       width: 50%;
       background-color: #ddd;
     }
-      
+
     #myprogressBar {
       width: 2%;
       height: 20px;
       background-color: #4CAF50;
     }
+
+    /* Text Entry CSS */
+      .ComplaintBox {
+        /* Add loaging wheel when user mouse hovers over text entry ComplaintBox */
+        cursor: wait;
+
+        /* Convert text in ComplaintBox to Rainbow  */
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+      }
+
+
     </style>
 </head>
 <body>
 
-    <div class="navcontainer">   
+    <div class="navcontainer">
     <a class="navlinks"  href="http://sharepointlist.com/">   <img src="http://sharepointlist.com/logo.png" alt="..." height="150"></a>
     <img src="images/wordart(4).png" alt="..." height="100"><br>
     <a class="navlinks" style="padding-left:10px; font-size:20px;"  href="http://sharepointlist.com/" target="_blank">Submit a Ticket</a>
@@ -47,10 +60,10 @@
 
     <div style="padding-top:20px;padding-left:50px;">
         <input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
-        <div id="welcomeDiv"  style="display:none;" class="answer_list" > 
-        
+        <div id="welcomeDiv"  style="display:none;" class="answer_list" >
+
         <p>Download Status of a Virus:</p>
-        
+
         <div id="Progress_Status">
           <div id="myprogressBar"></div>
           <center>
@@ -67,13 +80,13 @@
 
 
     <div class="container">
-  
 
-       
-  
+
+
+
     <h1>Submit a Ticket</h1>
    <h3>If there are any issues with the form, <a href="https://discord.gg/7NtgNbc46p">click here</a> & ask for Tyler </h3>
-  
+
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="jef"><br><br>
 
@@ -102,7 +115,7 @@
 
         </select> <br /><br />
         <label for="problem">Description of Problem:</label><br />
-        <textarea id="problem" name="problem" rows="4" cols="50"></textarea><br><br>
+        <textarea class="ComplaintBox" id="problem" name="problem" rows="4" cols="50"></textarea><br><br>
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -111,7 +124,7 @@
 
                 <button class="buttonFLASH" style="background-color:red;color:white;padding:20px;" onclick="prompt('Are you sure you want to delete this ticket?');window.location.reload();" tabindex="-1">Submit</button>
 
-          
+
 
             </div>
         </section>
@@ -122,13 +135,13 @@
         <br>
         <br>
 
-    
-
-       
 
 
 
-   
+
+
+
+
 
     <a class="buttonhover" onclick="window.print()" tabindex="-1" >
         <span class="submit"href="http://sharepointlist.com/">Submit</span>
@@ -220,15 +233,15 @@
 
             <script>function showDiv() {
                 document.getElementById('welcomeDiv').style.display = "block";
-                var element = document.getElementById("myprogressBar");   
+                var element = document.getElementById("myprogressBar");
                 var width = 1;
                 var identity = setInterval(scene, 10);
                 function scene() {
                   if (width >= 100) {
                     clearInterval(identity);
                   } else {
-                    width++; 
-                    element.style.width = width + '%'; 
+                    width++;
+                    element.style.width = width + '%';
                     element.innerHTML = width * 1  + '%';
                   }
                 }
