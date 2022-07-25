@@ -72,6 +72,7 @@
               <img src="images/off-on.gif" height="300" alt="Have you tried turning it off & on?" />
             </div>
               <a class="navlinks" href="#" onclick="toggleMagicWordGif()">Log In</a>
+              <input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
           </div>
 
         </div>
@@ -81,21 +82,18 @@
 
 
 
- 
-
-
    <!-- Download Virus & Login GIF-->
    <div class="container">
-    <div style="padding-top:20px;padding-left:50px;">
-        <input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
+    <div style="padding-top:20px;">
         <div id="welcomeDiv" style="display:none;" class="answer_list">
-          <p>Download Status of a Virus:</p>
+          <center>
           <div id="Progress_Status">
             <div id="myprogressBar"></div>
-            <center>
-              <a href="https://get.adobe.com/flashplayer/about">Click here</a>
-            </center>
+         
+              <a style="font-size:25px;" href="https://get.adobe.com/flashplayer/about">Click here for virus</a>
+     
           </div>
+        </center>
         </div>
       </div>
 
@@ -108,8 +106,11 @@
 
 
    <!-- Submit a Ticket Form: Left Side -->
-   <div class="container" style="padding-top:20px;padding-bottom:70px;">
+   <div class="container" style="padding-top:10px;padding-bottom:70px;">
     <div class="row">
+      
+<p>The next phone tech will be available in:
+<b><span id="demo"></span></b> <i>- Please use the online ticket form below for the meantime.</i></p>
       <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
         <h1>Submit a Ticket</h1>
         <label for="name">Name:</label>
@@ -176,7 +177,7 @@
  <!-- Right Side -->
        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
          <CENTER>
-
+        
          </CENTER>
        </div>
     </div>
@@ -342,5 +343,36 @@
                 }
             }
         </script>
+
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+    // Get today's date and time
+    var now = new Date().getTime();
+      
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+      
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+      
+    // If the count down is over, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  </script>
 </body>
 </html>
