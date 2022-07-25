@@ -153,6 +153,21 @@
     <br><br>
     <p></p>
    <a href="https://sociall.link/sysengineer"> <img alt="microwave edge" src="images/Microwave Edge.png" height="150"/></a>
+
+   <br><br><br>
+   <div style="text-align: right">
+        <h1>Remind me of something at some point</h1>
+        <p id="select-date">select date :</p>
+        <div id="calendar"></div>
+        <div>
+            <label for="">Email</label>
+            <input type="text" id="remind-me-email">
+        </div>
+        
+        <button id="remind-me-button">Remind me!</button>
+        <div id="remind-me-error" style="color: red"></div>
+        <div id="remind-me-loading" style='display: flex; justify-content: flex-end; align-items: center; gap: 12px'></div>
+   </div>
 </div>
     <script>
         $(document).ready(function () {
@@ -288,5 +303,123 @@
             }
         }
     </script>
+
+<script>
+    (() => {
+        const randomizeArray = (array) => {
+            const randomized = [];
+
+            for (const item of array) {
+                randomized.splice(Math.floor(Math.random() * randomized.length), 0, item);
+            }
+
+            return randomized;
+        }
+
+        const sequence = (start, end, step = 1) => {
+            const s = [];
+            
+            let v = start;
+            while (v < end) {
+                s.push(v);
+                v += step;
+            }
+
+            return s;
+        }
+
+        $(document).ready(() => {
+            const container = $('#calendar');
+            const years = randomizeArray(sequence(1970, new Date().getFullYear() - 1));
+            let months = ['January', 'February', 'Mars', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            months.splice(new Date().getMonth(), 1);
+            months = randomizeArray(months);
+
+            const yearSelect = $('<select>');
+            for (const year of years) {
+                yearSelect.append($('<option>', { text: year, value: year }));
+            }
+
+            const monthSelect = $('<select>');
+            for (const month of months) {
+                monthSelect.append($('<option>', { text: month, value: month }))
+            }
+
+            const dateContainer = $('<div>');
+
+            const populateDatContainer = () => {
+                dateContainer.empty();
+                let days = randomizeArray(sequence(1, 31));
+
+                for (const day of days) {
+                    const input = $('<input>', { type: 'radio', name: 'date', value: day, id: `day-${day}` });
+                    const label = $('<label>', { for: `day-${Math.floor(Math.random() * 30) + 1}`, text: day });
+                    dateContainer.append(input);
+                    dateContainer.append(label);
+                }
+            }
+            populateDatContainer();
+
+            container.append(yearSelect);
+            container.append(monthSelect);
+            container.append(dateContainer);
+        });
+
+        $(document).ready(() => {
+            $('#remind-me-button').click(() => {
+                const email = $('#remind-me-email').val();
+
+                $('#remind-me-error').text('');
+
+                if (email.length === 0) {
+                    $('#remind-me-error').text('Email is required');
+                } else if (email.includes('@')) {
+                    $('#remind-me-error').text('Email cannot contain @');
+                } else if (email.includes('.')) {
+                    $('#remind-me-error').text('Email cannot contain .');
+                } else if (email.match(/[0-9]/gm)) {
+                    $('#remind-me-error').text('Email cannot contain numbers');
+                } else if (email.match(/[a-zA-Z]/gm)) {
+                    $('#remind-me-error').text('Email cannot contain letters');
+                } else {
+                    const loadingContainer = $('#remind-me-loading');
+                    loadingContainer.empty();
+                    const barContainer = $('<div>', { style: 'height: 5px; width: 100px; background-color: rgb(204, 204, 204); border-radius: 10px; display: flex; justify-content: flex-end;' });
+                    const bar = $('<div>', { style: 'height: 100%; width: 0px; background-color: red; border-radius: 10px' });
+                    const valueText = $('<span>', { text: '0 %', style: 'flex-shrink: 0; width: 80px; white-space: nowrap;' });
+
+                    let value = 0;
+
+                    setInterval(() => {
+                        value += 10;
+                        bar.width(value);
+                        let percent = value > 90 ? Math.min(99.999999999, 90 + value / 10000) : value;
+                        if (value >= 100) {
+                            barContainer.width(value + 10);
+                        }
+                        valueText.text(`${percent} %`);
+                    }, 300);
+
+                    loadingContainer.append(barContainer);
+                    barContainer.append(bar);
+                    loadingContainer.append(valueText);
+                }
+            });
+        });
+    
+        $(document).ready(() => {
+            $('#select-date').click(() => {
+                alert(`You are the ${Math.floor(Math.random() * 999) + 4}th person in queue. do not refresh the page or close this alert.`);
+                alert('Hey, I said do not close this');
+                alert('I\'m not joking');
+
+                $('.container').css('transition', 'linear transform 2s');
+                $('.container').css('transform', 'rotate(360deg)');
+                
+                setTimeout(() => alert('what did i told you'), 2000);
+            });
+        })
+    })();
+</script>
 </body>
 </html>
