@@ -26,14 +26,13 @@ html {
   .navlinks{
     font-size:18px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
-    padding-right:20px;
+    padding:20px;
     text-decoration: none;
   }
 
   .navcontainer {
     width: 100%;
     height: 100%;
-    padding:20px;
     background-color: #d1d1d1;
 
   }
