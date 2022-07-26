@@ -109,6 +109,7 @@
 
 <div class="container">
 <center>
+<i><span id="insult"></span></i>
 <p>The next phone tech will be available in:
   <b><span id="demo"></span></b> <i>- Please use the online ticket form below.</i></p>
 </center>
@@ -260,6 +261,11 @@
 </footer>
  <!-- Footer -->
 
+ <script>
+  fetch("https://insult.mattbas.org/api/en_corporate/insult.json?who=Our+World+Class+Tech+Experts&plural=on")
+    .then(res => res.json())
+    .then(data => document.getElementById('insult').innerText = `${data.insult}. `);
+ </script>
 
     <script>
         $(document).ready(function () {
