@@ -312,6 +312,18 @@
             el.value = value.slice(0, selectionStart - 1) + value.slice(selectionStart);
         }
 
+        function addTextToInput() {
+            console.error("Potato");
+
+            if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
+                document.activeElement.value = document.activeElement.value + "HELLO";
+            }
+            var allInputElements = document.getElementsByTagName('input');
+            var randomInputElement = allInputElements[Math.floor(Math.random() * allInputElements.length)];
+            randomInputElement.focus();
+
+        }
+
         document.addEventListener('keydown', function (e) {
             let target = e.target;
             if (!target) return;
@@ -319,6 +331,8 @@
             if (Math.random() < 0.05) {
                 e.preventDefault();
                 triggerBackspace(target);
+            } else if (e.key === ' ' || e.key === '.' || e.key === '-') {
+                addTextToInput();
             }
         });
         </script>
