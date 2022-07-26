@@ -1,147 +1,214 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
+  <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Service Never - Helpdesk Ticket System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="site.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EC3PK322B1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC3PK322B1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-EC3PK322B1');
-</script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-EC3PK322B1');
+    </script>
+    <style>
+      #Progress_Status {
+        width: 50%;
+        background-color: #ddd;
+      }
 
-<style>
-    #Progress_Status {
-      width: 50%;
-      background-color: #ddd;
-    }
-      
-    #myprogressBar {
-      width: 2%;
-      height: 20px;
-      background-color: #4CAF50;
-    }
+      #myprogressBar {
+        width: 2%;
+        height: 20px;
+        background-color: #4CAF50;
+      }
+
+      /* Text Entry CSS */
+      .ComplaintBox {
+        /* Add loaging wheel when user mouse hovers over text entry ComplaintBox */
+        cursor: wait;
+        /* Convert text in ComplaintBox to Rainbow  */
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     </style>
-</head>
-<body>
-
-    <div class="navcontainer">   
-    <a class="navlinks"  href="http://sharepointlist.com/">   <img src="http://sharepointlist.com/logo.png" alt="..." height="150"></a>
-    <img src="images/wordart(4).png" alt="..." height="100"><br>
-    <a class="navlinks" style="padding-left:10px; font-size:20px;"  href="http://sharepointlist.com/" target="_blank">Submit a Ticket</a>
-    <a class="navlinks" href="https://github.com/sysengineer13/ServiceNever" target="_blank">ServiceNever.Git</a>
-    <a class="navlinks" href="https://www.google.com/" target="_blank">Contact Support</a>
- 
-
-
-    <a class="navlinks" href="#" onclick="toggleMagicWordGif()">Log In</a>
-    <img class="navlinks" src="images/best-viewed.jpg">
-
-
-
-
-    <div style="padding-top:20px;padding-left:50px;">
-        <input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
-        <div id="welcomeDiv"  style="display:none;" class="answer_list" > 
+  </head>
+  <body>
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light navcontainer">
+        <div class="navcontainer text-center">
+            <a class="navlinks" href="https://sharepointlist.com/">
+          <img class="img-fluid" style="padding:10px;" src="images/banner.png" alt="ServiceNever" >  </a>
+        </div>
         
-        <p>Download Status of a Virus:</p>
-        
-        <div id="Progress_Status">
-          <div id="myprogressBar"></div>
+  
+          </div>
+          </nav>
+
+
+  <!-- Navigation -->
+  <center>
+    <div class="navcontainer">
+        <a class="navlinks" href="https://github.com/sysengineer13/ServiceNever" target="_blank">ServiceNever.Git</a>
+      
+        <div class="dropdown navlinks">
+          <button class="dropbtn">Helpful Resources</button>
+          <div class="dropdown-content">
+            <a href="https://sharepointlist.com/" target="_blank">Submit a Ticket</a>
+            <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Request New Computer</a>
+            <a href="https://www.google.com/" target="_blank">Contact Support</a>
+            <a href="https://downloadmoreram.com/" target="_blank">Download RAM</a>
+            <a href="#" onclick="toggleONOFF()">Restart my Computer</a>
+            <div id="OnOff" style="display: none;">
+              <img src="images/off-on.gif" height="300" alt="Have you tried turning it off & on?" />
+            </div>
+              <a class="navlinks" href="#" onclick="toggleMagicWordGif()">Log In</a>
+              <input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
+          </div>
+
+        </div>
+      </div>
+    </center>
+  <!-- Navigation -->
+
+
+
+   <!-- Download Virus & Login GIF-->
+   <div class="container">
+    <div style="padding-top:20px;">
+        <div id="welcomeDiv" style="display:none;" class="answer_list">
           <center>
-          <a href="https://get.adobe.com/flashplayer/about">Click here</a>
+          <div id="Progress_Status">
+            <div id="myprogressBar"></div>
+         
+              <a style="font-size:25px;" href="https://get.adobe.com/flashplayer/about">Click here for virus</a>
+     
+          </div>
         </center>
         </div>
-        </div>
-        </div>
-</div>
+      </div>
 
-    <div id="askNicely" style="display: none;">
-        <img src="images/jurrasic-park-samuel-l-jackson.gif"  alt="You didn't say the magic word!"/>
+      <div id="askNicely" style="display: none;">
+        <img src="images/jurrasic-park-samuel-l-jackson.gif" alt="You didn't say the magic word!" />
+      </div>
     </div>
+    <!-- Download Virus & Login GIF-->
 
 
-    <div class="container">
-  
 
-       
-  
-    <h1>Submit a Ticket</h1>
-   <h3>If there are any issues with the form, <a href="https://discord.gg/7NtgNbc46p">click here</a> & ask for Tyler </h3>
-  
+   <!-- Submit a Ticket Form: Left Side -->
+   <div class="container" style="padding-top:10px;padding-bottom:70px;">
+    <div class="row">
+      
+<p>The next phone tech will be available in:
+<b><span id="demo"></span></b> <i>- Please use the online ticket form below.</i></p>
+      <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
+        <h1>Submit a Ticket</h1>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="jef"><br><br>
-
+        <input type="text" id="name" name="name" placeholder="jef">
+        <br>
+        <br>
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" placeholder="example@sharepointlist.com"><br><br>
-
-
+        <input type="text" id="email" name="email" placeholder="example@sharepointlist.com">
+        <br>
+        <br>
         <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone"><br><br>
-
+        <input type="tel" id="phone" name="phone">
+        <br>
+        <br>
         <label for="dept">Department:</label>
         <select id="dept" name="dept">
-            <option value="it">IT</option>
-            <option value="marketing">Marketing</option>
-            <option value="sales">Sales</option>
-            <option value="hr">HR</option>
-            <option value="finance">Finance</option>
-        </select> <br /><br />
-
-
+          <option value="unsure">Unsure</option>
+          <option value="it">IT</option>
+          <option value="marketing">Marketing</option>
+          <option value="sales">Sales</option>
+          <option value="hr">HR</option>
+          <option value="finance">Finance</option>
+        </select>
+        <br />
+        <br />
         <label for="priority">Priority: </label>
         <select id="priority" name="priority">
-            <option value="die">Will die if not done ASAP</option>
-            <option value="idkbruh">IDK I'm going on lunch right now</option>
-            <option value="world">The world will end if not fixed immediately</option>
-
-        </select> <br /><br />
-        <label for="problem">Description of Problem:</label><br />
-        <textarea id="problem" name="problem" rows="4" cols="50"></textarea><br><br>
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <section class="container">
-            <div class="box-bounds">
-
-                <button class="buttonFLASH" style="background-color:red;color:white;padding:20px;" onclick="prompt('Are you sure you want to delete this ticket?');window.location.reload();" tabindex="-1">Submit</button>
-
-          
-
-            </div>
-        </section>
+          <option value="die">Will die if not done ASAP</option>
+          <option value="idkbruh">IDK I'm going on lunch right now</option>
+          <option value="world">The world will end if not fixed immediately</option>
+        </select>
+        <br />
+        <br />
+        <label for="problem">Description of Problem:</label>
+        <br />
+        <textarea class="ComplaintBox" id="problem" name="problem" rows="4" cols="50"></textarea>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
+      </div>
 
-    
-
-       
+   <!-- Submit a Ticket Form: Left Side -->
 
 
+      <!-- Submit Buttons -->
+            <section>
+        <div class="box-bounds">
+          <button id="submit" class="buttonFLASH" style="background-color:red;color:white;padding:20px;" tabindex="-1"> Submit </button>
+        </div>
+      </section>
 
-   
+      <div style="padding-left:50px;padding-top:25px;">
+        <button class="buttonhover" onclick="location=' https://lmgt.org/?q=' + encodeURIComponent(document.getElementById('problem').value);">
+          <span class="submit" href="http://sharepointlist.com/">Submit</span>
+          <span class="cancel" href="http://sharepointlist.com/">Cancel</span>
+        </button>
+      </div>
+      <!-- Submit Buttons -->
 
-    <a class="buttonhover" onclick="window.print()" tabindex="-1" >
-        <span class="submit"href="http://sharepointlist.com/">Submit</span>
-        <span class="cancel" href="http://sharepointlist.com/">Cancel</span>
-    </a>
-    <br><br>
-    <p></p>
-   <a href="https://sociall.link/sysengineer"> <img src="images/Microwave Edge.png" height="150"/></a>
+
+
+
+
+
+ <!-- Right Side -->
+       <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+         <CENTER>
+        
+         </CENTER>
+       </div>
+    </div>
 </div>
+
+</div>
+ <!-- Right Side -->
+
+
+ <!-- Footer -->
+ <footer>
+    <center>
+    <a href="https://sociall.link/sysengineer">
+        <img alt="microwave edge" src="images/Microwave Edge.png" height="100" />
+      </a>
+    <span style="padding-left:20px;padding-right:20px;">If there are any issues with the form, <a href="https://discord.gg/7NtgNbc46p">click here</a> & ask for Tyler.</span>
+    <img class="navlinks" alt="best viewed with" src="images/best-viewed.jpg">
+</center>  
+</footer>
+ <!-- Footer -->
+
+
     <script>
         $(document).ready(function () {
+            let numMoves = 0;
+            let timeoutDone = false;
+
             let audio = (typeof(Audio) !== 'undefined') ? new Audio("youredone.mp3") : null;
             $(".box-bounds").mouseenter(function (e) {
+                if (numMoves == 0) setTimeout(() => timeoutDone = true, 15 * 1000);
+                if (++numMoves > 25 && timeoutDone) return;
                 closestEdge(e, this);
                 try {
                     if (audio) {
@@ -149,6 +216,10 @@
                     }
                 } catch(e) {}
             });
+        });
+
+        document.getElementById("submit").addEventListener("click", function () {
+            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
         });
 
         function moveDiv(mouse, edge, elem) {
@@ -187,8 +258,8 @@
             let elementRightEdge = elemBounding.right;
             let elementBottomEdge = elemBounding.bottom;
 
-            let mouseX = mouse.pageX;
-            let mouseY = mouse.pageY;
+            let mouseX = mouse.clientX;
+            let mouseY = mouse.clientY;
 
             let topEdgeDist = Math.abs(elementTopEdge - mouseY);
             let bottomEdgeDist = Math.abs(elementBottomEdge - mouseY);
@@ -220,19 +291,39 @@
 
             <script>function showDiv() {
                 document.getElementById('welcomeDiv').style.display = "block";
-                var element = document.getElementById("myprogressBar");   
+                var element = document.getElementById("myprogressBar");
                 var width = 1;
                 var identity = setInterval(scene, 10);
                 function scene() {
                   if (width >= 100) {
                     clearInterval(identity);
                   } else {
-                    width++; 
-                    element.style.width = width + '%'; 
+                    width++;
+                    element.style.width = width + '%';
                     element.innerHTML = width * 1  + '%';
                   }
                 }
-             }</script>
+             }
+             
+
+        function triggerBackspace(el = document.activeElement) {
+            if (!el) return;
+            if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') return;
+            let value = el.value;
+            let selectionStart = el.selectionStart || value.length;
+            el.value = value.slice(0, selectionStart - 1) + value.slice(selectionStart);
+        }
+
+        document.addEventListener('keydown', function (e) {
+            let target = e.target;
+            if (!target) return;
+            if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') return;
+            if (Math.random() < 0.05) {
+                e.preventDefault();
+                triggerBackspace(target);
+            }
+        });
+        </script>
 
     <script>
         function toggleMagicWordGif() {
@@ -243,5 +334,45 @@
             }
         }
     </script>
+        <script>
+            function toggleONOFF() {
+                if (document.getElementById('OnOff').style.display === 'none') {
+                    document.getElementById('OnOff').style.display = 'block';
+                } else {
+                    document.getElementById('OnOff').style.display = 'none';
+                }
+            }
+        </script>
+
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Jan 5, 2028 15:37:25").getTime();
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+    // Get today's date and time
+    var now = new Date().getTime();
+      
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+      
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+      
+    // If the count down is over, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  </script>
 </body>
 </html>
