@@ -22,9 +22,9 @@ if (dict.image && dict.content) {
   updateImage(dict.image, dict.content);
 }
 
-document.body.addEventListener("click", (e) => {
+document.addEventListener("click", (e) => {
   const target = e.target;
-  if (target.classList.contains("square")) {
+  if (target.classList.contains("waldosquare")) {
     target.classList.toggle("selected");
   }
 });
