@@ -1,0 +1,122 @@
+.waldo {
+    display: flex;
+    flex-flow: column;
+    width:420px;
+
+  }
+ .waldoheader {
+    background: #4a90e2;
+    padding: 1.6rem;
+    color: white;
+    font-weight: normal;
+    font-family: sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.006em;
+    word-spacing: 0.01em;
+  }
+  .waldoheader strong {
+    font-size: 1.8em;
+    letter-spacing: 0.002em;
+    display: block;
+    margin-top: 3px;
+    font-weight: bolder;
+    line-height: 1;
+  }
+  small {
+    display: block;
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+  .waldosquare {
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid white;
+    position: relative;
+  }
+  .waldosquare:hover {
+    transition: all 0.3s;
+    box-shadow: inset 1000px 1000px rgba(0, 0, 0, 0.1);
+  }
+  .waldosquare.selected {
+    transition: all 0.3s;
+    box-shadow: inset 1000px 1000px rgba(0, 0, 0, 0.2);
+  }
+  .waldosquare.selected::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 4px;
+    content: "\2713";
+    position: absolute;
+    margin: 0.4em;
+    top: -12px;
+    left: -12px;
+    border-radius: 50%;
+    background: #4a90e2;
+    color: white;
+    height: 24px;
+    width: 24px;
+  }
+  .waldogrid {
+    display: grid;
+    grid-template-columns: repeat(6, 65px);
+    grid-template-rows: repeat(3, 65px);
+    background-color: tomato;
+    background-image: url(images/waldo.jpg);
+    background-position: contain;
+    background-size: 384px;
+  }
+  .waldoicons span {
+    margin-left: 0.3em;
+    font-size: 1em;
+    color: #737373;
+    cursor: pointer;
+  }
+  .waldoicons span:first-child {
+    margin-left: 0.2em;
+  }
+  .waldoicons span.material-icons {
+    color: #333;
+    font-size: 1em;
+  }
+  .waldofooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 384px;
+    padding: 7px;
+    border-top: 1px solid #ccc;
+  }
+  .waldobutton {
+    background: #4a90e2;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    padding: 1em 2.4em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 0.9em;
+  }
+  .waldobutton:hover {
+    box-shadow: inset 1000px 1000px rgba(0, 0, 0, 0.1);
+  }
+  .waldobutton:active {
+    box-shadow: inset 1000px 1000px rgba(0, 0, 0, 0.2);
+  }
+  .waldocontainer {
+    border: 1px solid #ccc;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 1px 1px 5px;
+  }
+  .waldoheader, .waldogrid{
+    margin: 7px;
+  }
+  .waldoheader {
+    margin-bottom: 0;
+  }
+  
