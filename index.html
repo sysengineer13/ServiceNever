@@ -48,344 +48,343 @@
   </head>
   <body>
 
-  <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light navcontainer">
-        <div class="navcontainer text-center">
-            <a class="navlinks" href="https://sharepointlist.com/">
-          <img class="img-fluid" style="padding:10px;" src="images/banner.png" alt="ServiceNever" >  </a>
-        </div>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light navcontainer">
+          <div class="navcontainer text-center">
+              <a class="navlinks" href="https://sharepointlist.com/">
+                  <img class="img-fluid" style="padding:10px;" src="images/banner.png" alt="ServiceNever">
+              </a>
           </div>
-          </nav>
-  <!-- Navigation -->
-  <center>
-    <div class="navcontainer">
-        <a class="navlinks" href="https://github.com/sysengineer13/ServiceNever" target="_blank">ServiceNever.Git</a>
-      
-        <div class="dropdown navlinks">
-          <button class="dropbtn">Helpful Resources</button>
-          <div class="dropdown-content">
-            <a href="https://sharepointlist.com/" target="_blank">Submit a Ticket</a>
-            <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Request New Computer</a>
-            <a href="https://www.google.com/" target="_blank">Contact Support</a>
-            <a href="https://downloadmoreram.com/" target="_blank">Download RAM</a>
-            <a href="#" onclick="toggleONOFF()">Restart my Computer</a>
-            <div id="OnOff" style="display: none;">
-              <img src="images/off-on.gif" height="300" alt="Have you tried turning it off & on?" />
-            </div>
-              <a class="navlinks" href="#" onclick="toggleMagicWordGif()">Log In</a>
-              <input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
+          </div>
+      </nav>
+      <!-- Navigation -->
+      <center>
+          <div class="navcontainer">
+              <a class="navlinks" href="https://github.com/sysengineer13/ServiceNever" target="_blank">ServiceNever.Git</a>
+
+              <div class="dropdown navlinks">
+                  <button class="dropbtn">Helpful Resources</button>
+                  <div class="dropdown-content">
+                      <a href="https://sharepointlist.com/" target="_blank">Submit a Ticket</a>
+                      <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Request New Computer</a>
+                      <a href="https://www.google.com/" target="_blank">Contact Support</a>
+                      <a href="https://downloadmoreram.com/" target="_blank">Download RAM</a>
+                      <a href="#" onclick="toggleONOFF()">Restart my Computer</a>
+                      <div id="OnOff" style="display: none;">
+                          <img src="images/off-on.gif" height="300" alt="Have you tried turning it off & on?" />
+                      </div>
+                      <a class="navlinks" href="#" onclick="toggleMagicWordGif()">Log In</a>
+                      <input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
+                  </div>
+
+              </div>
+          </div>
+      </center>
+      <!-- Navigation -->
+      <!-- Download Virus & Login GIF-->
+      <div class="container">
+          <div style="padding-top:20px;">
+              <div id="welcomeDiv" style="display:none;" class="answer_list">
+                  <center>
+                      <div id="Progress_Status">
+                          <div id="myprogressBar"></div>
+
+                          <a style="font-size:25px;" href="https://get.adobe.com/flashplayer/about">Click here for virus</a>
+
+                      </div>
+                  </center>
+              </div>
           </div>
 
-        </div>
+          <div id="askNicely" style="display: none;">
+              <img src="images/jurrasic-park-samuel-l-jackson.gif" alt="You didn't say the magic word!" />
+          </div>
       </div>
-    </center>
-  <!-- Navigation -->
+      <!-- Download Virus & Login GIF-->
+      <!-- Submit a Ticket Form: Left Side -->
+      <div class="container" style="padding-top:10px;padding-bottom:70px;">
+          <div class="row">
+
+              <p>
+                  The next phone tech will be available in:
+                  <b><span id="demo"></span></b> <i>- Please use the online ticket form below.</i>
+              </p>
+              <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                  <h1>Submit a Ticket</h1>
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" placeholder="jef">
+                  <br>
+                  <br>
+                  <label for="email">Email:</label>
+                  <input type="text" id="email" name="email" placeholder="example@sharepointlist.com">
+                  <br>
+                  <br>
+                  <label for="phone">Phone:</label>
+                  <input type="tel" id="phone" name="phone">
+                  <br>
+                  <br>
+                  <label for="dept">Department:</label>
+                  <select id="dept" name="dept">
+                      <option value="unsure">Unsure</option>
+                      <option value="it">IT</option>
+                      <option value="marketing">Marketing</option>
+                      <option value="sales">Sales</option>
+                      <option value="hr">HR</option>
+                      <option value="finance">Finance</option>
+                  </select>
+                  <br />
+                  <br />
+                  <label for="priority">Priority: </label>
+                  <select id="priority" name="priority">
+                      <option value="die">Will die if not done ASAP</option>
+                      <option value="idkbruh">IDK I'm going on lunch right now</option>
+                      <option value="world">The world will end if not fixed immediately</option>
+                      <option value="Lie">System Down</option>
+                      <option value="Actual">I could google this</option>
+                  </select>
+                  <br />
+                  <br />
+                  <label for="problem">Description of Problem:</label>
+                  <br />
+                  <textarea class="ComplaintBox" id="problem" name="problem" rows="4" cols="50"></textarea>
+                  <br>
+                  <script></script>
+
+                  <!-- Submit a Ticket Form: Left Side -->
 
 
+              </div>
 
-   <!-- Download Virus & Login GIF-->
-   <div class="container">
-    <div style="padding-top:20px;">
-        <div id="welcomeDiv" style="display:none;" class="answer_list">
+              <!-- Submit Buttons -->
+              <section>
+                  <div class="box-bounds">
+                      <button id="submit" class="buttonFLASH" style="background-color:red;color:white;padding:20px;" tabindex="-1"> Submit </button>
+                  </div>
+              </section>
+
+              <div style="padding-left:50px;padding-top:25px;">
+                  <button class="buttonhover" onclick="location=' https://lmgt.org/?q=' + encodeURIComponent(document.getElementById('problem').value);">
+                      <span class="submit" href="http://sharepointlist.com/">Submit</span>
+                      <span class="cancel" href="http://sharepointlist.com/">Cancel</span>
+                  </button>
+              </div>
+              <!-- Submit Buttons -->
+              <!-- Right Side -->
+              <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                  <CENTER>
+
+                  </CENTER>
+              </div>
+          </div>
+      </div>
+
+      </div>
+      <!-- Right Side -->
+      <!-- Footer -->
+      <footer>
           <center>
-          <div id="Progress_Status">
-            <div id="myprogressBar"></div>
-         
-              <a style="font-size:25px;" href="https://get.adobe.com/flashplayer/about">Click here for virus</a>
-     
-          </div>
-        </center>
-        </div>
-      </div>
-
-      <div id="askNicely" style="display: none;">
-        <img src="images/jurrasic-park-samuel-l-jackson.gif" alt="You didn't say the magic word!" />
-      </div>
-    </div>
-    <!-- Download Virus & Login GIF-->
+              <a href="https://sociall.link/sysengineer">
+                  <img alt="microwave edge" src="images/Microwave Edge.png" height="100" />
+              </a>
+              <span style="padding-left:20px;padding-right:20px;">If there are any issues with the form, <a href="https://discord.gg/7NtgNbc46p">click here</a> & ask for Tyler.</span>
+              <img class="navlinks" alt="best viewed with" src="images/best-viewed.jpg">
+          </center>
+      </footer>
+      <!-- Footer -->
 
 
-   <!-- Submit a Ticket Form: Left Side -->
-   <div class="container" style="padding-top:10px;padding-bottom:70px;">
-    <div class="row">
-      
-<p>The next phone tech will be available in:
-<b><span id="demo"></span></b> <i>- Please use the online ticket form below.</i></p>
-      <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
-        <h1>Submit a Ticket</h1>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="jef">
-        <br>
-        <br>
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" placeholder="example@sharepointlist.com">
-        <br>
-        <br>
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone">
-        <br>
-        <br>
-        <label for="dept">Department:</label>
-        <select id="dept" name="dept">
-          <option value="unsure">Unsure</option>
-          <option value="it">IT</option>
-          <option value="marketing">Marketing</option>
-          <option value="sales">Sales</option>
-          <option value="hr">HR</option>
-          <option value="finance">Finance</option>
-        </select>
-        <br />
-        <br />
-        <label for="priority">Priority: </label>
-        <select id="priority" name="priority">
-          <option value="die">Will die if not done ASAP</option>
-          <option value="idkbruh">IDK I'm going on lunch right now</option>
-          <option value="world">The world will end if not fixed immediately</option>
-        </select>
-        <br />
-        <br />
-        <label for="problem">Description of Problem:</label>
-        <br />
-        <textarea class="ComplaintBox" id="problem" name="problem" rows="4" cols="50"></textarea>
-        <br>
-<script></script>
+      <script>
+          $(document).ready(function () {
+              let numMoves = 0;
+              let timeoutDone = false;
 
-   <!-- Submit a Ticket Form: Left Side -->
+              let audio = (typeof (Audio) !== 'undefined') ? new Audio("engineer_no01.mp3") : null;
+              $(".box-bounds").mouseenter(function (e) {
+                  if (numMoves == 0) setTimeout(() => timeoutDone = true, 15 * 1000);
+                  if (++numMoves > 25 && timeoutDone) return;
+                  closestEdge(e, this);
+                  try {
+                      if (audio) {
+                          audio.play();
+                      }
+                  } catch (e) { }
+              });
+          });
 
- 
-     </div>
+          document.getElementById("submit").addEventListener("click", function () {
+              window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+          });
 
-      <!-- Submit Buttons -->
-            <section>
-        <div class="box-bounds">
-          <button id="submit" class="buttonFLASH" style="background-color:red;color:white;padding:20px;" tabindex="-1"> Submit </button>
-        </div>
-      </section>
+          function moveDiv(mouse, edge, elem) {
+              const width = $(elem).outerWidth();
+              const height = $(elem).outerHeight();
 
-      <div style="padding-left:50px;padding-top:25px;">
-        <button class="buttonhover" onclick="location=' https://lmgt.org/?q=' + encodeURIComponent(document.getElementById('problem').value);">
-          <span class="submit" href="http://sharepointlist.com/">Submit</span>
-          <span class="cancel" href="http://sharepointlist.com/">Cancel</span>
-        </button>
-      </div>
-      <!-- Submit Buttons -->
+              switch (edge) {
+                  case "left":
+                      $(elem).css({
+                          left: mouse.pageX + 50
+                      });
+                      break;
+                  case "right":
+                      $(elem).css({
+                          left: mouse.pageX - width - 50
+                      });
+                      break;
+                  case "top":
+                      $(elem).css({
+                          top: mouse.pageY + 50
+                      });
+                      break;
+                  case "bottom":
+                      $(elem).css({
+                          top: mouse.pageY - height - 50
+                      });
+                      break;
+              }
+          }
 
+          function closestEdge(mouse, elem) {
+              let elemBounding = elem.getBoundingClientRect();
 
+              let elementLeftEdge = elemBounding.left;
+              let elementTopEdge = elemBounding.top;
+              let elementRightEdge = elemBounding.right;
+              let elementBottomEdge = elemBounding.bottom;
 
+              let mouseX = mouse.clientX;
+              let mouseY = mouse.clientY;
 
- <!-- Right Side -->
-       <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
-         <CENTER>
-        
-         </CENTER>
-       </div>
-    </div>
-</div>
+              let topEdgeDist = Math.abs(elementTopEdge - mouseY);
+              let bottomEdgeDist = Math.abs(elementBottomEdge - mouseY);
+              let leftEdgeDist = Math.abs(elementLeftEdge - mouseX);
+              let rightEdgeDist = Math.abs(elementRightEdge - mouseX);
 
-</div>
- <!-- Right Side -->
+              let min = Math.min(topEdgeDist, bottomEdgeDist, leftEdgeDist, rightEdgeDist);
 
+              let position;
 
- <!-- Footer -->
- <footer>
-    <center>
-    <a href="https://sociall.link/sysengineer">
-        <img alt="microwave edge" src="images/Microwave Edge.png" height="100" />
-      </a>
-    <span style="padding-left:20px;padding-right:20px;">If there are any issues with the form, <a href="https://discord.gg/7NtgNbc46p">click here</a> & ask for Tyler.</span>
-    <img class="navlinks" alt="best viewed with" src="images/best-viewed.jpg">
-</center>  
-</footer>
- <!-- Footer -->
+              switch (min) {
+                  case leftEdgeDist:
+                      position = "left";
+                      break;
+                  case rightEdgeDist:
+                      position = "right";
+                      break;
+                  case topEdgeDist:
+                      position = "top";
+                      break;
+                  case bottomEdgeDist:
+                      position = "bottom";
+                      break;
+              }
+
+              moveDiv(mouse, position, elem);
+          }</script>
 
 
-    <script>
-        $(document).ready(function () {
-            let numMoves = 0;
-            let timeoutDone = false;
-
-            let audio = (typeof(Audio) !== 'undefined') ? new Audio("engineer_no01.mp3") : null;
-            $(".box-bounds").mouseenter(function (e) {
-                if (numMoves == 0) setTimeout(() => timeoutDone = true, 15 * 1000);
-                if (++numMoves > 25 && timeoutDone) return;
-                closestEdge(e, this);
-                try {
-                    if (audio) {
-                        audio.play();
-                    }
-                } catch(e) {}
-            });
-        });
-
-        document.getElementById("submit").addEventListener("click", function () {
-            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-        });
-
-        function moveDiv(mouse, edge, elem) {
-            const width = $(elem).outerWidth();
-            const height = $(elem).outerHeight();
-
-            switch (edge) {
-                case "left":
-                    $(elem).css({
-                        left: mouse.pageX + 50
-                    });
-                    break;
-                case "right":
-                    $(elem).css({
-                        left: mouse.pageX - width - 50
-                    });
-                    break;
-                case "top":
-                    $(elem).css({
-                        top: mouse.pageY + 50
-                    });
-                    break;
-                case "bottom":
-                    $(elem).css({
-                        top: mouse.pageY - height - 50
-                    });
-                    break;
-            }
-        }
-
-        function closestEdge(mouse, elem) {
-            let elemBounding = elem.getBoundingClientRect();
-
-            let elementLeftEdge = elemBounding.left;
-            let elementTopEdge = elemBounding.top;
-            let elementRightEdge = elemBounding.right;
-            let elementBottomEdge = elemBounding.bottom;
-
-            let mouseX = mouse.clientX;
-            let mouseY = mouse.clientY;
-
-            let topEdgeDist = Math.abs(elementTopEdge - mouseY);
-            let bottomEdgeDist = Math.abs(elementBottomEdge - mouseY);
-            let leftEdgeDist = Math.abs(elementLeftEdge - mouseX);
-            let rightEdgeDist = Math.abs(elementRightEdge - mouseX);
-
-            let min = Math.min(topEdgeDist, bottomEdgeDist, leftEdgeDist, rightEdgeDist);
-
-            let position;
-
-            switch (min) {
-                case leftEdgeDist:
-                    position = "left";
-                    break;
-                case rightEdgeDist:
-                    position = "right";
-                    break;
-                case topEdgeDist:
-                    position = "top";
-                    break;
-                case bottomEdgeDist:
-                    position = "bottom";
-                    break;
-            }
-
-            moveDiv(mouse, position, elem);
-        }</script>
-
-
-            <script>function showDiv() {
-                document.getElementById('welcomeDiv').style.display = "block";
-                var element = document.getElementById("myprogressBar");
-                var width = 1;
-                var identity = setInterval(scene, 10);
-                function scene() {
+      <script>
+          function showDiv() {
+              document.getElementById('welcomeDiv').style.display = "block";
+              var element = document.getElementById("myprogressBar");
+              var width = 1;
+              var identity = setInterval(scene, 10);
+              function scene() {
                   if (width >= 100) {
-                    clearInterval(identity);
+                      clearInterval(identity);
                   } else {
-                    width++;
-                    element.style.width = width + '%';
-                    element.innerHTML = width * 1  + '%';
+                      width++;
+                      element.style.width = width + '%';
+                      element.innerHTML = width * 1 + '%';
                   }
-                }
-             }
-             
+              }
+          }
 
-        function triggerBackspace(el = document.activeElement) {
-            if (!el) return;
-            if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') return;
-            let value = el.value;
-            let selectionStart = el.selectionStart || value.length;
-            el.value = value.slice(0, selectionStart - 1) + value.slice(selectionStart);
-        }
 
-        function addTextToInput() {
-            console.error("Potato");
+          function triggerBackspace(el = document.activeElement) {
+              if (!el) return;
+              if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') return;
+              let value = el.value;
+              let selectionStart = el.selectionStart || value.length;
+              el.value = value.slice(0, selectionStart - 1) + value.slice(selectionStart);
+          }
 
-            if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
-                document.activeElement.value = document.activeElement.value + "HELLO";
-            }
-            var allInputElements = document.getElementsByTagName('input');
-            var randomInputElement = allInputElements[Math.floor(Math.random() * allInputElements.length)];
-            randomInputElement.focus();
+          function addTextToInput() {
+              console.error("Potato");
 
-        }
+              if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
+                  document.activeElement.value = document.activeElement.value + "HELLO";
+              }
+              var allInputElements = document.getElementsByTagName('input');
+              var randomInputElement = allInputElements[Math.floor(Math.random() * allInputElements.length)];
+              randomInputElement.focus();
 
-        document.addEventListener('keydown', function (e) {
-            let target = e.target;
-            if (!target) return;
-            if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') return;
-            if (Math.random() < 0.05) {
-                e.preventDefault();
-                triggerBackspace(target);
-            } else if (e.key === ' ' || e.key === '.' || e.key === '-') {
-                addTextToInput();
-            }
-        });
-        </script>
+          }
 
-    <script>
-        function toggleMagicWordGif() {
-            if (document.getElementById('askNicely').style.display === 'none') {
-                document.getElementById('askNicely').style.display = 'block';
-            } else {
-                document.getElementById('askNicely').style.display = 'none';
-            }
-        }
-    </script>
-        <script>
-            function toggleONOFF() {
-                if (document.getElementById('OnOff').style.display === 'none') {
-                    document.getElementById('OnOff').style.display = 'block';
-                } else {
-                    document.getElementById('OnOff').style.display = 'none';
-                }
-            }
-        </script>
+          document.addEventListener('keydown', function (e) {
+              let target = e.target;
+              if (!target) return;
+              if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') return;
+              if (Math.random() < 0.05) {
+                  e.preventDefault();
+                  triggerBackspace(target);
+              } else if (e.key === ' ' || e.key === '.' || e.key === '-') {
+                  addTextToInput();
+              }
+          });
+      </script>
 
-<script>
-  // Set the date we're counting down to
-  var countDownDate = new Date("Jan 5, 2028 15:37:25").getTime();
-  
-  // Update the count down every 1 second
-  var x = setInterval(function() {
-  
-    // Get today's date and time
-    var now = new Date().getTime();
-      
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-      
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      
-    // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-      
-    // If the count down is over, write some text 
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-  }, 1000);
-  </script>
-</body>
+      <script>
+          function toggleMagicWordGif() {
+              if (document.getElementById('askNicely').style.display === 'none') {
+                  document.getElementById('askNicely').style.display = 'block';
+              } else {
+                  document.getElementById('askNicely').style.display = 'none';
+              }
+          }
+      </script>
+      <script>
+          function toggleONOFF() {
+              if (document.getElementById('OnOff').style.display === 'none') {
+                  document.getElementById('OnOff').style.display = 'block';
+              } else {
+                  document.getElementById('OnOff').style.display = 'none';
+              }
+          }
+
+          // Set the date we're counting down to
+          var countDownDate = new Date("Jan 5, 2028 15:37:25").getTime();
+
+          // Update the count down every 1 second
+          var x = setInterval(function () {
+
+              // Get today's date and time
+              var now = new Date().getTime();
+
+              // Find the distance between now and the count down date
+              var distance = countDownDate - now;
+
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+              // Output the result in an element with id="demo"
+              document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                  + minutes + "m " + seconds + "s ";
+
+              // If the count down is over, write some text
+              if (distance < 0) {
+                  clearInterval(x);
+                  document.getElementById("demo").innerHTML = "EXPIRED";
+              }
+          }, 1000);
+      </script>
+
+  <script>
+      $('#priority').on('focusout', function (e) {
+          this.value = 'Actual';
+      });
+      </script>
+  </body>
 </html>
