@@ -11,7 +11,6 @@ Designed by IT for IT.
 
 - Provides helpful troubleshooting resources for end users
   - Request a New Computer
-  - Contact Support
   - Download More RAM
   - Restart Computer Button
   - Log in portal
@@ -30,4 +29,4 @@ Designed by IT for IT.
 
 - Second submit button underneath that takes the Description of Problem box and conveniently places it into a https://lmgt.org/ search
 
-
+- Added chat box so users can now chat with tech support
