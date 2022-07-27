@@ -1,5 +1,5 @@
 # ServiceNever
-ServiceNever is a help desk ticketing system. ServiceNever is just as useful as a SharePoint list. 
+ServiceNever is a help desk ticketing system. Service No-, I mean Never, is just as useful as a SharePoint list. 
 
 
 [**Submit a Ticket**](https://sharepointlist.com/)
