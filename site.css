@@ -274,7 +274,7 @@ html {
   main {
     max-width: 400px;
     margin: auto;
-    height: 50vh;
+    height: 70vh;
     background-color:#DDD;
     padding:15px;
     position: relative;
@@ -401,14 +401,28 @@ html {
   @media screen and (max-width: 480px) {
     .chat-box p {
       font-size: 30px;
+
+    }
+    .chat-open {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+
     }
     .chat-input {
-      width: 30%;
+      width: 100%;
       float: left;
       font-size: 28px;
     }
     .chat-submit {
       float: right;
+    }
+    .box {
+      transition: height 0.6s ease-out;
+      width: 400px;
+      height: 0px;
+      z-index: 9999;
     }
   }
 
