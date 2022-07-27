@@ -1,5 +1,6 @@
 # ServiceNever
-This is a helpdesk program I am writing for trolling purposes. The code is trash and I am not going to clean it up.
+ServiceNever is a help desk ticketing system. ServiceNever is just as useful as a SharePoint list. 
+
 
 [**Submit a Ticket**](https://sharepointlist.com/)
 
