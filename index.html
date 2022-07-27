@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
+   <!-- Chrissy Wake Up -->
     <meta charset="utf-8" />
     <title>Service Never - Helpdesk Ticket System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,6 +11,7 @@
     <script src="CAPTCHA.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC3PK322B1"></script>
@@ -101,30 +103,43 @@
           </div>
       </div>
       <!-- Download Virus & Login GIF-->
-      <!-- Submit a Ticket Form: Left Side -->
-      <div class="container" style="padding-top:10px;padding-bottom:70px;">
-          <div class="row">
 
+
+
+
+      <div class="container">
+          <center>
+              <i><span id="insult"></span></i>
               <p>
                   The next phone tech will be available in:
                   <b><span id="demo"></span></b> <i>- Please use the online ticket form below.</i>
               </p>
-              <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-xs-12">
-                  <h1>Submit a Ticket</h1>
+          </center>
+      </div>
+
+
+      <!-- Submit a Ticket Form: Left Side -->
+      <div class="container" style="padding-right:25px;">
+          <div class="row ">
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
+                  <center>
+                      <h1>Submit a Ticket</h1>
+                  </center>
                   <label for="name">Name:</label>
-                  <input type="text" id="name" name="name" placeholder="jef">
+                  <input type="text" title="Name:" id="name" name="name" placeholder="jef">
                   <br>
                   <br>
                   <label for="email">Email:</label>
-                  <input type="text" id="email" name="email" placeholder="example@sharepointlist.com">
+                  <input type="text" title="Email:" id="email" name="email" placeholder="example@sharepointlist.com">
                   <br>
                   <br>
                   <label for="phone">Phone:</label>
-                  <input type="tel" id="phone" name="phone">
+                  <input type="tel" title="Phone:" id="phone" name="phone">
                   <br>
                   <br>
                   <label for="dept">Department:</label>
-                  <select id="dept" name="dept">
+                  <select title="Department:" id="dept" name="dept">
                       <option value="unsure">Unsure</option>
                       <option value="it">IT</option>
                       <option value="marketing">Marketing</option>
@@ -135,7 +150,7 @@
                   <br />
                   <br />
                   <label for="priority">Priority: </label>
-                  <select id="priority" name="priority">
+                  <select title="Priority:" id="priority" name="priority">
                       <option value="die">Will die if not done ASAP</option>
                       <option value="idkbruh">IDK I'm going on lunch right now</option>
                       <option value="world">The world will end if not fixed immediately</option>
@@ -146,34 +161,85 @@
                   <br />
                   <label for="problem">Description of Problem:</label>
                   <br />
-                  <textarea class="ComplaintBox" id="problem" name="problem" rows="4" cols="50"></textarea>
+                  <textarea class="ComplaintBox" title="Description of Problem:" id="problem" name="problem" rows="4" cols="50"></textarea>
                   <br>
                   <script></script>
 
                   <!-- Submit a Ticket Form: Left Side -->
+                  <!-- Waldo Catcha -->
+                  <div class="waldo">
+                      <div class="waldocontainer">
+                          <div class="waldoheader"><small>Select all squares with</small> <strong id="content">Waldo</strong> <small>if there are none, click skip</small></div>
+                          <div class="waldogrid">
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare "></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                          </div>
+                          <div class="waldofooter">
+                              <div class="waldoicons">
+                                  <span class="material-icons-outlined"><img src="images/waldoicons.png" /></span>
 
-
-              </div>
-
-              <!-- Submit Buttons -->
-              <section>
-                  <div class="box-bounds">
-                      <button id="submit" class="buttonFLASH" style="background-color:red;color:white;padding:20px;" tabindex="-1"> Submit </button>
+                              </div>
+                              <button class="waldobutton" type="button">Next</button>
+                          </div>
+                      </div>
                   </div>
-              </section>
+                  <!-- Waldo Catcha -->
 
-              <div style="padding-left:50px;padding-top:25px;">
-                  <button class="buttonhover" onclick="location=' https://lmgt.org/?q=' + encodeURIComponent(document.getElementById('problem').value);">
-                      <span class="submit" href="http://sharepointlist.com/">Submit</span>
-                      <span class="cancel" href="http://sharepointlist.com/">Cancel</span>
-                  </button>
+                  <div class="container" style="padding-bottom:70px;">
+                      <div class="row">
+
+                          <section>
+                              <div class="box-bounds">
+                                  <button id="submit" class="buttonFLASH" style="background-color:red;color:white;padding:20px;" tabindex="-1"> Submit </button>
+                              </div>
+                          </section>
+
+                          <div style="padding-left:50px;padding-top:25px;">
+                              <button class="buttonhover" onclick="location=' https://lmgt.org/?q=' + encodeURIComponent(document.getElementById('problem').value);">
+                                  <span class="submit" href="http://sharepointlist.com/">Submit</span>
+                                  <span class="cancel" href="http://sharepointlist.com/">Cancel</span>
+                              </button>
+                          </div>
+                      </div>
+
+
+
+
+
+                  </div>
               </div>
-              <!-- Submit Buttons -->
-              <!-- Right Side -->
-              <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                  <CENTER>
 
-                  </CENTER>
+
+
+
+
+
+
+
+
+              <!-- Right Side -->
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                  <CENTER>
+                      <a href="https://mspgeek.org/?utm_source=sharepointlist.com&utm_medium=ad&utm_campaign=mspgeek&utm_id=MSPgeek">
+                          <img src="images/mspgeek.png" style="width:35%" />
+                      </a>
+                  </CENTER></br>
               </div>
           </div>
       </div>
@@ -192,6 +258,11 @@
       </footer>
       <!-- Footer -->
 
+      <script>
+          fetch("https://insult.mattbas.org/api/en_corporate/insult.json?who=Our+World+Class+Tech+Experts&plural=on")
+              .then(res => res.json())
+              .then(data => document.getElementById('insult').innerText = `${data.insult}. `);
+      </script>
 
       <script>
           $(document).ready(function () {
@@ -333,58 +404,59 @@
           });
       </script>
 
-      <script>
-          function toggleMagicWordGif() {
-              if (document.getElementById('askNicely').style.display === 'none') {
-                  document.getElementById('askNicely').style.display = 'block';
-              } else {
-                  document.getElementById('askNicely').style.display = 'none';
-              }
+  <script>
+      function toggleMagicWordGif() {
+          if (document.getElementById('askNicely').style.display === 'none') {
+              document.getElementById('askNicely').style.display = 'block';
+          } else {
+              document.getElementById('askNicely').style.display = 'none';
           }
-      </script>
-      <script>
-          function toggleONOFF() {
-              if (document.getElementById('OnOff').style.display === 'none') {
-                  document.getElementById('OnOff').style.display = 'block';
-              } else {
-                  document.getElementById('OnOff').style.display = 'none';
-              }
+      }
+  </script>
+  <script>
+      function toggleONOFF() {
+          if (document.getElementById('OnOff').style.display === 'none') {
+              document.getElementById('OnOff').style.display = 'block';
+          } else {
+              document.getElementById('OnOff').style.display = 'none';
           }
-
-          // Set the date we're counting down to
-          var countDownDate = new Date("Jan 5, 2028 15:37:25").getTime();
-
-          // Update the count down every 1 second
-          var x = setInterval(function () {
-
-              // Get today's date and time
-              var now = new Date().getTime();
-
-              // Find the distance between now and the count down date
-              var distance = countDownDate - now;
-
-              // Time calculations for days, hours, minutes and seconds
-              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-              // Output the result in an element with id="demo"
-              document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-                  + minutes + "m " + seconds + "s ";
-
-              // If the count down is over, write some text
-              if (distance < 0) {
-                  clearInterval(x);
-                  document.getElementById("demo").innerHTML = "EXPIRED";
-              }
-          }, 1000);
-      </script>
+      }
+  </script>
 
   <script>
-      $('#priority').on('focusout', function (e) {
-          this.value = 'Actual';
-      });
+      // Set the date we're counting down to
+      var countDownDate = new Date("Jan 5, 2028 15:37:25").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+
+          // Get today's date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+
+          // If the count down is over, write some text
+          if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+      }, 1000);
+  </script>
+      <script>
+          $('#priority').on('focusout', function (e) {
+              this.value = 'Actual';
+          });
       </script>
   </body>
 </html>
