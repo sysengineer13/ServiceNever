@@ -21,7 +21,6 @@ Designed by IT for IT.
 
 - Easy type text fields 
  - Hit the space bar and it will enable autotyping
- - Description of problem with rainbow text 
  - Hover over the description box to and the cursor will change to a loading icon
  - Description will type in rainbow font for better viewing
 
