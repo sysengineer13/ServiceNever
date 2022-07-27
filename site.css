@@ -397,34 +397,20 @@ html {
   .chat-submit:focus {
     outline: 0;
   }
-  
-  @media screen and (max-width: 480px) {
-    .chat-box p {
-      font-size: 30px;
-
-    }
-    .chat-open {
-      position: fixed;
-      bottom: 0;
-      right: 0;
-      width: 50%;
-
-    }
-    .chat-input {
-      width: 100%;
-      float: left;
-      font-size: 28px;
-    }
-    .chat-submit {
-      float: right;
-    }
-    .box {
-      transition: height 0.6s ease-out;
-      width: 400px;
-      height: 0px;
-      z-index: 9999;
-    }
+ 
+@media screen and (max-width: 480px) {
+  .chat-box p {
+    font-size: 30px;
   }
+  .chat-input {
+    width: 60%;
+    float: left;
+    font-size: 28px;
+  }
+  .chat-submit {
+    float: right;
+  }
+}
 
 
 
