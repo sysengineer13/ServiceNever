@@ -31,6 +31,3 @@ Designed by IT for IT.
 - Second submit button underneath that takes the Description of Problem box and conveniently places it into a https://lmgt.org/ search
 
 
-
-### Description of Problem
-- Rainbow Text
