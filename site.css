@@ -1,440 +1,439 @@
 html {
-    font-size: 14px;
-  }
-  
-  @media (min-width: 768px) {
-    html {
-      font-size: 16px;
-    }
-  }
-  
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
   html {
-    position: relative;
-    min-height: 100%;
-  }
-  
-  body {
-    margin-bottom: 60px;
-  }
-
-  footer {
-    padding:20px;
-    background-color: #d1d1d1;
-
-  }
-  
-  .navlinks{
-    font-size:18px;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    padding:10px;
-    text-decoration: none;
-  }
-
-  .navcontainer {
-    width: 100%;
-    height: 100%;
-    padding:5px;
-    background-color: #d1d1d1;
-
-  }
-  
-
-  
-  .buttonFLASH {
-      background-color: #004A7F;
-      width: 100% -webkit-border-radius: 10px;
-      border-radius: 10px;
-      border: none;
-      color: #FFFFFF;
-      cursor: pointer;
-      display: inline-block;
-      font-family: Arial;
-      font-size: 24px;
-      padding: 5px 10px;
-      text-align: center;
-      text-decoration: none;
-      -webkit-animation: glowing 1500ms infinite;
-      -moz-animation: glowing 1500ms infinite;
-      -o-animation: glowing 1500ms infinite;
-      animation: glowing 1500ms infinite;
-  }
-  
-  
-  
-  @-webkit-keyframes glowing {
-  
-      0% {
-          background-color: #B20000;
-          -webkit-box-shadow: 0 0 3px #B20000;
-      }
-  
-  
-  
-      50% {
-          background-color: #FF0000;
-          -webkit-box-shadow: 0 0 40px #FF0000;
-      }
-  
-  
-  
-      100% {
-          background-color: #B20000;
-          -webkit-box-shadow: 0 0 3px #B20000;
-      }
-  }
-  
-  
-  
-  @-moz-keyframes glowing {
-  
-      0% {
-          background-color: #B20000;
-          -moz-box-shadow: 0 0 3px #B20000;
-      }
-  
-  
-  
-      50% {
-          background-color: #FF0000;
-          -moz-box-shadow: 0 0 40px #FF0000;
-      }
-  
-  
-  
-      100% {
-          background-color: #B20000;
-          -moz-box-shadow: 0 0 3px #B20000;
-      }
-  }
-  
-  
-  
-  @-o-keyframes glowing {
-  
-      0% {
-          background-color: #B20000;
-          box-shadow: 0 0 3px #B20000;
-      }
-  
-  
-  
-      50% {
-          background-color: #FF0000;
-          box-shadow: 0 0 40px #FF0000;
-      }
-  
-  
-  
-      100% {
-          background-color: #B20000;
-          box-shadow: 0 0 3px #B20000;
-      }
-  }
-  
-  
-  
-  @keyframes glowing {
-  
-      0% {
-          background-color: #B20000;
-          box-shadow: 0 0 3px #B20000;
-      }
-  
-  
-  
-      50% {
-          background-color: #FF0000;
-          box-shadow: 0 0 40px #FF0000;
-      }
-  
-  
-  
-      100% {
-          background-color: #B20000;
-          box-shadow: 0 0 3px #B20000;
-      }
-  }
-  
-  
-  
-
-  
-  
-
-  
-  .box-bounds {
-      padding: 10px;
-      position: absolute;
-  }
-  
-  .box {
-      width: 50px;
-      height: 50px;
-      border: 1px #000 solid;
-      right: 200px;
-      background: red;
-      transition: 0.5s;
-  }
-  
-  
-  
-  .buttonhover {
-      font-size:16px;
-      background-color:#d1d1d1;
-      color:white;
-      padding:5px;
-  border:none;
-  
-  }
-  
-  .buttonhover:hover {
-      font-size:16px;
-      padding:5px;
-  
-      background-color:green;
-  color:white;
-  border:none;
-  
-  }
-  
-  
-  .buttonhover .cancel {
-      display: none;
-    }
-    
-    .buttonhover:hover .submit {
-      display: none;
-    }
-    
-    .buttonhover:hover .cancel {
-      display: inline;
-    }
-
-
-
-
-     /* Dropdown Button */
-.dropbtn {
-    background-color: #04AA6D;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    color: white;
-    padding: 16px;
     font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+footer {
+  padding:20px;
+  background-color: #d1d1d1;
+
+}
+
+.navlinks{
+  font-size:18px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  padding:10px;
+  text-decoration: none;
+}
+
+.navcontainer {
+  width: 100%;
+  height: 100%;
+  padding:5px;
+  background-color: #d1d1d1;
+
+}
+
+
+
+.buttonFLASH {
+    background-color: #004A7F;
+    width: 100% -webkit-border-radius: 10px;
+    border-radius: 10px;
     border: none;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    white-space: nowrap;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #3e8e41;} 
-
-
-  
-
-
-  /* Chat box */
-  body {
-    margin: 0;
-    font-family: sans-serif;
-    -ms-overflow-style: scrollbar;
-    overflow-style: scrollbar;
-    background-color: #DDD;
-  }
-  
-  main {
-    max-width: 400px;
-    margin: auto;
-    height: 70vh;
-    background-color:#DDD;
-    padding:15px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .chat-box-container {
-    margin: 0;
-    width: 100%;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    height: 0;
-  }
-  
-  .chat-box-header {
-    display: block;
-    text-align: center;
-  }
-  
-  .chat-box {
-    margin: 4px 4px 4px 4px;
-
-    flex-grow: 1;
-    background-color: #FFF;
-    overflow-y: scroll;
-  }
-  
-  .chat-box p {
-    margin: 0;
-    padding: 6px;
-    font-size: 20px;
-  }
-  
-  .ai-person-container {
-    display: block;
-    overflow: auto;
-  }
-  
-  .ai,
-  .person {
-    overflow: auto;
-    margin: 4px;
-    border: 2px solid black;
-    border-radius: 8px;
-    display: inline-block;
-  }
-  
-  .ai {
-    text-align: left;
-    margin-right: 36px;
-    border-color: purple;
-    float: left;
-    border-bottom-left-radius: 0px;
-  }
-  
-  .person {
-    text-align: left;
-    margin-left: 36px;
-    border-color: blue;
-    float: right;
-    border-bottom-right-radius: 0px;
-  }
-  
-  .ai-date,
-  .person-date {
-    font-size: 10px;
-    clear: both;
-  }
-  
-  .ai-date {
-    float: left;
-    margin-left: 6px;
-  }
-  
-  .person-date {
-    float: right;
-    margin-right: 6px;
-  }
-  
-  .chat-input-container {
-    position: relative;
-
-    bottom: 0;
-    align-items: center;
-    justify-content: center;
-    overflow: auto;
-  }
-  
-  .chat-input {
-    height: 40px;
-    width: auto;
-    display: inline-block;
-    flex-grow: 1;
-    padding: 2px 2px 2px 2px;
-    margin: 0 4px 0 4px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .chat-input:focus {
-    outline: 0;
-  }
-  
-  .chat-submit {
-    padding: 2px 2px 2px 2px;
-    margin-right: 4px;
-    border: none;
-
-    background-color: #69AAFF;
-    font-size: 18px;
-  }
-  
-  .chat-submit:hover {
+    color: #FFFFFF;
     cursor: pointer;
-    background-color: #80BBFF;
-  }
-  
-  .chat-submit:focus {
-    outline: 0;
-  }
- 
-@media screen and (max-width: 480px) {
-  .chat-box p {
-    font-size: 20px;
-  }
-  .chat-input {
-    width: 80%;
-    float: left;
-    font-size: 28px;
-  }
-  .chat-submit {
-    float: right;
-  }
+    display: inline-block;
+    font-family: Arial;
+    font-size: 24px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-animation: glowing 1500ms infinite;
+    -moz-animation: glowing 1500ms infinite;
+    -o-animation: glowing 1500ms infinite;
+    animation: glowing 1500ms infinite;
+}
+
+
+
+@-webkit-keyframes glowing {
+
+    0% {
+        background-color: #B20000;
+        -webkit-box-shadow: 0 0 3px #B20000;
+    }
+
+
+
+    50% {
+        background-color: #FF0000;
+        -webkit-box-shadow: 0 0 40px #FF0000;
+    }
+
+
+
+    100% {
+        background-color: #B20000;
+        -webkit-box-shadow: 0 0 3px #B20000;
+    }
+}
+
+
+
+@-moz-keyframes glowing {
+
+    0% {
+        background-color: #B20000;
+        -moz-box-shadow: 0 0 3px #B20000;
+    }
+
+
+
+    50% {
+        background-color: #FF0000;
+        -moz-box-shadow: 0 0 40px #FF0000;
+    }
+
+
+
+    100% {
+        background-color: #B20000;
+        -moz-box-shadow: 0 0 3px #B20000;
+    }
+}
+
+
+
+@-o-keyframes glowing {
+
+    0% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000;
+    }
+
+
+
+    50% {
+        background-color: #FF0000;
+        box-shadow: 0 0 40px #FF0000;
+    }
+
+
+
+    100% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000;
+    }
+}
+
+
+
+@keyframes glowing {
+
+    0% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000;
+    }
+
+
+
+    50% {
+        background-color: #FF0000;
+        box-shadow: 0 0 40px #FF0000;
+    }
+
+
+
+    100% {
+        background-color: #B20000;
+        box-shadow: 0 0 3px #B20000;
+    }
 }
 
 
 
 
-  .chat-open {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-  }
-  .box {
-    transition: height 0.6s ease-out;
-    width: 400px;
-    height: 0px;
-    z-index: 9999;
-  }
-  .open:hover > .box {
-    height: 100%;
-    transition: height 0.6s ease-out;
-  }
-  .open {
-    text-align: center;
-    font-size: 20px;
-    border: 2px solid #3f51b5;
-    background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);
-    color: black;
+
+
+
+
+.box-bounds {
+    padding: 10px;
+    position: absolute;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    border: 1px #000 solid;
+    right: 200px;
+ 
+    transition: 0.5s;
+}
+
+
+
+.buttonhover {
+    font-size:16px;
+    background-color:#d1d1d1;
+    color:white;
+    padding:5px;
+border:none;
+
+}
+
+.buttonhover:hover {
+    font-size:16px;
+    padding:5px;
+
+    background-color:green;
+color:white;
+border:none;
+
+}
+
+
+.buttonhover .cancel {
+    display: none;
   }
   
+  .buttonhover:hover .submit {
+    display: none;
+  }
+  
+  .buttonhover:hover .cancel {
+    display: inline;
+  }
+
+
+
+
+   /* Dropdown Button */
+.dropbtn {
+  background-color: #04AA6D;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  white-space: nowrap;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;} 
+
+
+
+
+
+/* Chat box */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -ms-overflow-style: scrollbar;
+  overflow-style: scrollbar;
+  background-color: #DDD;
+}
+
+main {
+  max-width: 400px;
+  margin: auto;
+  height: 70vh;
+  background-color:#DDD;
+  padding:15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-box-container {
+  margin: 0;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+}
+
+.chat-box-header {
+  display: block;
+  text-align: center;
+}
+
+.chat-box {
+  margin: 4px 4px 4px 4px;
+
+  flex-grow: 1;
+  background-color: #FFF;
+  overflow-y: scroll;
+}
+
+.chat-box p {
+  margin: 0;
+  padding: 6px;
+  font-size: 20px;
+}
+
+.ai-person-container {
+  display: block;
+  overflow: auto;
+}
+
+.ai,
+.person {
+  overflow: auto;
+  margin: 4px;
+  border: 2px solid black;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.ai {
+  text-align: left;
+  margin-right: 36px;
+  border-color: #f59ccf;
+  float: left;
+  border-bottom-left-radius: 0px;
+}
+
+.person {
+  text-align: left;
+  margin-left: 36px;
+  border-color: #98b3e6;
+  float: right;
+  border-bottom-right-radius: 0px;
+}
+
+.ai-date,
+.person-date {
+  font-size: 10px;
+  clear: both;
+}
+
+.ai-date {
+  float: left;
+  margin-left: 6px;
+}
+
+.person-date {
+  float: right;
+  margin-right: 6px;
+}
+
+.chat-input-container {
+  position: relative;
+
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.chat-input {
+  height: 40px;
+  width: auto;
+  display: inline-block;
+  flex-grow: 1;
+  padding: 2px 2px 2px 2px;
+  margin: 0 4px 0 4px;
+  font-size: 16px;
+  border: none;
+}
+
+.chat-input:focus {
+  outline: 0;
+}
+
+.chat-submit {
+  padding: 2px 2px 2px 2px;
+  margin-right: 4px;
+  border: none;
+
+  background-color: #69AAFF;
+  font-size: 18px;
+}
+
+.chat-submit:hover {
+  cursor: pointer;
+  background-color: #80BBFF;
+}
+
+.chat-submit:focus {
+  outline: 0;
+}
+
+@media screen and (max-width: 480px) {
+.chat-box p {
+  font-size: 20px;
+}
+.chat-input {
+  width: 80%;
+  float: left;
+  font-size: 28px;
+}
+.chat-submit {
+  float: right;
+}
+}
+
+
+
+
+.chat-open {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.box {
+  transition: height 0.6s ease-out;
+  width: 400px;
+  height: 0px;
+  z-index: 9999;
+}
+.open:hover > .box {
+  height: 100%;
+  transition: height 0.6s ease-out;
+}
+.open {
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid #3f51b5;
+  background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);
+  color: black;
+}
