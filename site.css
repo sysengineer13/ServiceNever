@@ -327,7 +327,7 @@ html {
   .ai {
     text-align: left;
     margin-right: 36px;
-    border-color: red;
+    border-color: purple;
     float: left;
     border-bottom-left-radius: 0px;
   }
@@ -400,10 +400,10 @@ html {
  
 @media screen and (max-width: 480px) {
   .chat-box p {
-    font-size: 30px;
+    font-size: 20px;
   }
   .chat-input {
-    width: 60%;
+    width: 80%;
     float: left;
     font-size: 28px;
   }
