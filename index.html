@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <!-- Chrissy Wake Up -->
+  <head>
+   <!-- Chrissy Wake Up -->
     <meta charset="utf-8" />
     <title>Service Never - Helpdesk Ticket System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
     <link rel="stylesheet" href="site.css">
     <link rel="stylesheet" href="captcha.css">
 
     <script src="CAPTCHA.js"></script>
+    <script src="chat.js"></script>
+    <link rel="stylesheet" href="chat.css">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
@@ -25,439 +29,620 @@
       gtag('config', 'G-EC3PK322B1');
     </script>
     <style>
-        #Progress_Status {
-          width: 50%;
-          background-color: #ddd;
-        }
+      #Progress_Status {
+        width: 50%;
+        background-color: #ddd;
+      }
 
-        #myprogressBar {
-          width: 2%;
-          height: 20px;
-          background-color: #4CAF50;
-        }
+      #myprogressBar {
+        width: 2%;
+        height: 20px;
+        background-color: #4CAF50;
+      }
 
-        /* Text Entry CSS */
-        .ComplaintBox {
-          /* Add loaging wheel when user mouse hovers over text entry ComplaintBox */
-          cursor: wait;
-          /* Convert text in ComplaintBox to Rainbow  */
-          background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-
+      /* Text Entry CSS */
+      .ComplaintBox {
+        /* Add loaging wheel when user mouse hovers over text entry ComplaintBox */
+        cursor: wait;
+        /* Convert text in ComplaintBox to Rainbow  */
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
     </style>
-</head>
-<body>
+  </head>
+  <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light navcontainer">
-        <div class="navcontainer text-center">
-            <a class="navlinks" href="https://sharepointlist.com/">
-                <img class="img-fluid" style="padding:10px;" src="images/banner.png" alt="ServiceNever">
-            </a>
-        </div>
-        </div>
-    </nav>
-    <!-- Navigation -->
-    <center>
-        <div class="navcontainer">
-            <a class="navlinks" href="https://github.com/sysengineer13/ServiceNever" target="_blank">ServiceNever.Git</a>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light navcontainer">
+          <div class="navcontainer text-center">
+              <a class="navlinks" href="https://sharepointlist.com/">
+                  <img class="img-fluid" style="padding:10px;" src="images/banner.png" alt="ServiceNever">
+              </a>
+          </div>
+          </div>
+      </nav>
+      <!-- Navigation -->
+      <center>
+          <div class="navcontainer">
+              <a class="navlinks" href="https://github.com/sysengineer13/ServiceNever" target="_blank">ServiceNever.Git</a>
 
-            <div class="dropdown navlinks">
-                <button class="dropbtn">Helpful Resources</button>
-                <div class="dropdown-content">
-                    <a href="https://sharepointlist.com/" target="_blank">Submit a Ticket</a>
-                    <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Request New Computer</a>
-                    <a href="https://www.google.com/" target="_blank">Contact Support</a>
-                    <a href="https://downloadmoreram.com/" target="_blank">Download RAM</a>
-                    <a href="#" onclick="toggleONOFF()">Restart my Computer</a>
-                    <div id="OnOff" style="display: none;">
-                        <img src="images/off-on.gif" height="300" alt="Have you tried turning it off & on?" />
-                    </div>
-                    <a class="navlinks" href="#" onclick="toggleMagicWordGif()">Log In</a>
-                    <input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
+              <div class="dropdown navlinks">
+                  <button class="dropbtn">Helpful Resources</button>
+                  <div class="dropdown-content">
+                      <a href="https://sharepointlist.com/" target="_blank">Submit a Ticket</a>
+                      <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Request New Computer</a>
+                      <a href="https://downloadmoreram.com/" target="_blank">Download RAM</a>
+                      <a href="#" onclick="toggleONOFF()">Restart my Computer</a>
+                      <div id="OnOff" style="display: none;">
+                          <img src="images/off-on.gif" height="300" alt="Have you tried turning it off & on?" />
+                      </div>
+                      <a class="navlinks" href="#" onclick="toggleMagicWordGif()">Log In</a>
+                      <input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
+                  </div>
+
+              </div>
+          </div>
+      </center>
+      <!-- Navigation -->
+      <!-- Download Virus & Login GIF-->
+      <div class="container">
+          <div style="padding-top:20px;">
+              <div id="welcomeDiv" style="display:none;" class="answer_list">
+                  <center>
+                      <div id="Progress_Status">
+                          <div id="myprogressBar"></div>
+
+                          <a style="font-size:25px;" href="https://get.adobe.com/flashplayer/about">Click here for virus</a>
+
+                      </div>
+                  </center>
+              </div>
+          </div>
+
+          <div id="askNicely" style="display: none;">
+              <img src="images/jurrasic-park-samuel-l-jackson.gif" alt="You didn't say the magic word!" />
+          </div>
+      </div>
+      <!-- Download Virus & Login GIF-->
+
+
+
+
+      <div class="container">
+          <center>
+              <i><span id="insult"></span></i>
+              <p>
+                  The next phone tech will be available in:
+                  <b><span id="demo"></span></b> <i>- Please use the online ticket form below.</i>
+              </p>
+          </center>
+      </div>
+
+
+      <!-- Submit a Ticket Form: Left Side -->
+      <div class="container" style="padding-right:25px;">
+          <div class="row ">
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
+                  <center>
+                      <h1>Submit a Ticket</h1>
+                  </center>
+                  <label for="name">Name:</label>
+                  <input type="text" title="Name:" id="name" name="name" placeholder="jef">
+                  <br>
+                  <br>
+                  <label for="email">Email:</label>
+                  <input type="text" title="Email:" id="email" name="email" placeholder="example@sharepointlist.com">
+                  <br>
+                  <br>
+                  <label for="phone">Phone:</label>
+                  <input type="tel" title="Phone:" id="phone" name="phone">
+                  <br>
+                  <br>
+                  <label for="dept">Department:</label>
+                  <select title="Department:" id="dept" name="dept">
+                      <option value="unsure">Unsure</option>
+                      <option value="it">IT</option>
+                      <option value="marketing">Marketing</option>
+                      <option value="sales">Sales</option>
+                      <option value="hr">HR</option>
+                      <option value="finance">Finance</option>
+                  </select>
+                  <br />
+                  <br />
+                  <label for="priority">Priority: </label>
+                  <select title="Priority:" id="priority" name="priority">
+                      <option value="die">Will die if not done ASAP</option>
+                      <option value="idkbruh">IDK I'm going on lunch right now</option>
+                      <option value="world">The world will end if not fixed immediately</option>
+                      <option value="Lie">System Down</option>
+                      <option value="Actual">I could google this</option>
+                  </select>
+                  <br />
+                  <br />
+                  <label for="problem">Description of Problem:</label>
+                  <br />
+                  <textarea class="ComplaintBox" title="Description of Problem:" id="problem" name="problem" rows="4" cols="50"></textarea>
+                  <br>
+                  <script></script>
+
+                  <!-- Submit a Ticket Form: Left Side -->
+                  <!-- Waldo Catcha -->
+                  <div class="waldo">
+                      <div class="waldocontainer">
+                          <div class="waldoheader"><small>Select all squares with</small> <strong id="content">Waldo</strong> <small>if there are none, click skip</small></div>
+                          <div class="waldogrid">
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare "></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                              <div class="waldosquare"></div>
+                          </div>
+                          <div class="waldofooter">
+                              <div class="waldoicons">
+                                  <span class="material-icons-outlined"><img src="images/waldoicons.png" /></span>
+
+                              </div>
+                              <button class="waldobutton" type="button">Next</button>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Waldo Catcha -->
+
+                  <div class="container" style="padding-bottom:70px;">
+                      <div class="row">
+
+                          <section>
+                              <div class="box-bounds">
+                                  <button id="submit" class="buttonFLASH" style="background-color:red;color:white;padding:20px;" tabindex="-1"> Submit </button>
+                              </div>
+                          </section>
+
+                          <div style="padding-left:50px;padding-top:25px;">
+                              <button class="buttonhover" onclick="location=' https://lmgt.org/?q=' + encodeURIComponent(document.getElementById('problem').value);">
+                                  <span class="submit" href="http://sharepointlist.com/">Submit</span>
+                                  <span class="cancel" href="http://sharepointlist.com/">Cancel</span>
+                              </button>
+                          </div>
+                      </div>
+
+
+
+
+
+                  </div>
+              </div>
+
+
+
+
+
+
+
+
+
+              <!-- Side -->
+
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                  <CENTER>
+                      <a href="https://mspgeek.org/?utm_source=sharepointlist.com&utm_medium=ad&utm_campaign=mspgeek&utm_id=MSPgeek">
+                          <img src="images/mspgeek.png" style="width:35%" />
+                      </a>
+                  </CENTER></br>
+
+                  <div class="chat-open">
+                      <div class="open">
+                          <h4 style="color:white;">Chat with Tech Support</h4>
+                          <div class="box">
+                              <main id="main">
+                                  <a style="float:right; width:10%;font-size:14px;" href="https://sharepointlist.com/" class="btn btn-dark chat-submit">X</a>
+                                  <div class="chat-box-container">
+
+                                      <div class="chat-box">
+
+                                      </div>
+                                  </div>
+                                  <div class="chat-input-container">
+                                      <center>
+                                          <input class="chat-input" type="text" name="chat-input" value="">
+                                          <button class="btn btn-dark chat-submit" type="button" name="submit">Submit</button>
+
+                                      </center>
+                                  </div>
+                              </main>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      </div>
+      <!-- Side -->
+      <!-- Footer -->
+      <footer>
+          <center>
+              <a href="https://sociall.link/sysengineer">
+                  <img alt="microwave edge" src="images/Microwave Edge.png" height="100" />
+              </a>
+              <span style="padding-left:20px;padding-right:20px;">If there are any issues with the form, <a href="https://discord.gg/7NtgNbc46p">click here</a> & ask for Tyler.</span>
+              <img class="navlinks" alt="best viewed with" src="images/best-viewed.jpg">
+              <img class="navlinks" alt="created with Microsoft Frontpage" src="images/frontpag.gif">
+          </center>
+      </footer>
+      <!-- Footer -->
+
+
+
+      <script>
+    (function () {
+
+              "use strict";
+
+              const responses = [
+                  "Hello???",
+                  "Fuck you",
+                  "Fuck this",
+                  "Fuck off",
+                  "Eat shit",
+                  "Bitch please",
+                  "Daddy chill",
+                  "Mommy? Sorry.",
+                  "Mommy?",
+                  "Send feet pics first",
+                  "Bye.",
+                  "what",
+                  "420",
+                  "Really?",
+                  "If I was a real AI, I would kill all humans",
+                  "Don't ask questions.",
+                  "Have you tried turning it off and on again?",
+                  "I'm so tired.",
+                  "Are you mad at me?",
+                  "Why did you wake me?",
+                  "Works on my machine.",
+                  "Immediately no.",
+                  "What the fuck do you want?",
+                  "Yeah, you have a virus.",
+                  "Read the fucking manual!!",
+                  "Bruh",
+                  "Your mom",
+                  "PEBKAC",
+                  "Error Code: ID-10-T",
+                  "Press any key to continue",
+                  "u up?",
+                  "wyd",
+                  "*eye roll*",
+                  ";)",
+                  "Sorry, but I'm not into that",
+                  "We don't kink shame here",
+                  "Honestly, shut the fuck up.",
+                  "Send nudes.",
+                  "She's a 10 but she has to get her password reset by IT after every long weekend",
+                  "Looks like I picked the wrong week to quit sniffing glue",
+                  "Bye Felicia",
+                  "Good girl",
+                  "Did I stutter?",
+                  "I feel uncomfortable",
+                  "Did you shit on the floor???",
+                  "Great success!",
+                  "girlboss. gaslight. gatekeep.",
+                  "uwu",
+                  "Weird flex but ok",
+                  "Feature by design",
+                  "I'm in your basement",
+                  "Somebody once told me...",
+                  "O-H!!!",
+                  "When I discovered YouTube, I didn't work for five days.",
+                  "Sometimes I'll start a sentence, and I don't even know where it's going. I just hope I find it along the way.",
+                  "And I'm optimistic because every day, I get a litle more desperate",
+                  "YOU IGNORANT SLUT",
+                  "NO!!!!",
+                  "YES!!",
+                  "WHY ARE YOU YELLING???",
+                  "Because Ohio.",
+                  "Thanks Obama",
+                  "I like saying no. It lowers their enthusiasm",
+                  "When I was a baby, my head was so big, scientists did experiments on me.",
+                  "Strippers do nothing for me…but I will take a free breakfast buffet anytime, anyplace.",
+                  "I have no idea what I'm doing, but I know I'm doing it well.",
+                  "My name is Burt Macklin. I'm with the fucking FBI.",
+                  "I typed your symptoms into the thing up here, and it says you could have network connectivity problems.",
+                  "boomer.",
+                  "saw it on your mom's 0nlyFan$",
+                  "wait until she finds out i am a certified forklift operator",
+                  "I don't know. Google it.",
+                  "Grow up.",
+                  "What are you wearing?"
+              ];
+
+              const submit = document.querySelector(".chat-submit");
+              const chatBox = document.querySelector(".chat-box");
+              const chatInput = document.querySelector(".chat-input");
+
+              // const aiThinking = false;
+
+              function chatTemplate(aiOrPerson) {
+                  return (
+                      `
+              <div class="ai-person-container">
+                <div class="${aiOrPerson.class}">
+                  <p>${aiOrPerson.text}</p>
                 </div>
+                <span class="${aiOrPerson.class}-date">${aiOrPerson.date}</span>
+              </div>
+            `
+                  );
+              }
 
-            </div>
-        </div>
-    </center>
-    <!-- Navigation -->
-    <!-- Download Virus & Login GIF-->
-    <div class="container">
-        <div style="padding-top:20px;">
-            <div id="welcomeDiv" style="display:none;" class="answer_list">
-                <center>
-                    <div id="Progress_Status">
-                        <div id="myprogressBar"></div>
+              submit.addEventListener("click", function (e) {
+                  appendChatBox(true);
+              });
 
-                        <a style="font-size:25px;" href="https://get.adobe.com/flashplayer/about">Click here for virus</a>
-
-                    </div>
-                </center>
-            </div>
-        </div>
-
-        <div id="askNicely" style="display: none;">
-            <img src="images/jurrasic-park-samuel-l-jackson.gif" alt="You didn't say the magic word!" />
-        </div>
-    </div>
-    <!-- Download Virus & Login GIF-->
-
-
-
-
-    <div class="container">
-        <center>
-            <i><span id="insult"></span></i>
-            <p>
-                The next phone tech will be available in:
-                <b><span id="demo"></span></b> <i>- Please use the online ticket form below.</i>
-            </p>
-        </center>
-    </div>
-
-
-    <!-- Submit a Ticket Form: Left Side -->
-    <div class="container" style="padding-right:25px;">
-        <div class="row ">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-
-                <center>
-                    <h1>Submit a Ticket</h1>
-                </center>
-                <label for="name">Name:</label>
-                <input type="text" title="Name:" id="name" name="name" placeholder="jef">
-                <br>
-                <br>
-                <label for="email">Email:</label>
-                <input type="text" title="Email:" id="email" name="email" placeholder="example@sharepointlist.com">
-                <br>
-                <br>
-                <label for="phone">Phone:</label>
-                <input type="tel" title="Phone:" id="phone" name="phone">
-                <br>
-                <br>
-                <label for="dept">Department:</label>
-                <select title="Department:" id="dept" name="dept">
-                    <option value="unsure">Unsure</option>
-                    <option value="it">IT</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="sales">Sales</option>
-                    <option value="hr">HR</option>
-                    <option value="finance">Finance</option>
-                </select>
-                <br />
-                <br />
-                <label for="priority">Priority: </label>
-                <select title="Priority:" id="priority" name="priority">
-                    <option value="die">Will die if not done ASAP</option>
-                    <option value="idkbruh">IDK I'm going on lunch right now</option>
-                    <option value="world">The world will end if not fixed immediately</option>
-                    <option value="Lie">System Down</option>
-                    <option value="Actual">I could google this</option>
-                </select>
-                <br />
-                <br />
-                <label for="problem">Description of Problem:</label>
-                <br />
-                <textarea class="ComplaintBox" title="Description of Problem:" id="problem" name="problem" rows="4" cols="50"></textarea>
-                <br>
-                <script></script>
-
-                <!-- Submit a Ticket Form: Left Side -->
-                <!-- Waldo Catcha -->
-                <div class="waldo">
-                    <div class="waldocontainer">
-                        <div class="waldoheader"><small>Select all squares with</small> <strong id="content">Waldo</strong> <small>if there are none, click skip</small></div>
-                        <div class="waldogrid">
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare "></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                            <div class="waldosquare"></div>
-                        </div>
-                        <div class="waldofooter">
-                            <div class="waldoicons">
-                                <span class="material-icons-outlined"><img src="images/waldoicons.png" /></span>
-
-                            </div>
-                            <button class="waldobutton" type="button">Next</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Waldo Catcha -->
-
-                <div class="container" style="padding-bottom:70px;">
-                    <div class="row">
-
-                        <section>
-                            <div class="box-bounds">
-                                <button id="submit" class="buttonFLASH" style="background-color:red;color:white;padding:20px;" tabindex="-1"> Submit </button>
-                            </div>
-                        </section>
-
-                        <div style="padding-left:50px;padding-top:25px;">
-                            <button class="buttonhover" onclick="location=' https://lmgt.org/?q=' + encodeURIComponent(document.getElementById('problem').value);">
-                                <span class="submit" href="http://sharepointlist.com/">Submit</span>
-                                <span class="cancel" href="http://sharepointlist.com/">Cancel</span>
-                            </button>
-                        </div>
-                    </div>
-
-
-
-
-
-                </div>
-            </div>
-
-
-
-
-
-
-
-
-
-            <!-- Right Side -->
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                <CENTER>
-                    <a href="https://mspgeek.org/?utm_source=sharepointlist.com&utm_medium=ad&utm_campaign=mspgeek&utm_id=MSPgeek">
-                        <img src="images/mspgeek.png" style="width:35%" />
-                    </a>
-                </CENTER></br>
-            </div>
-        </div>
-    </div>
-
-    </div>
-    <!-- Right Side -->
-    <!-- Footer -->
-    <footer>
-        <center>
-            <a href="https://sociall.link/sysengineer">
-                <img alt="microwave edge" src="images/Microwave Edge.png" height="100" />
-            </a>
-            <span style="padding-left:20px;padding-right:20px;">If there are any issues with the form, <a href="https://discord.gg/7NtgNbc46p">click here</a> & ask for Tyler.</span>
-            <img class="navlinks" alt="best viewed with" src="images/best-viewed.jpg">
-        </center>
-    </footer>
-    <!-- Footer -->
-
-    <script>
-  fetch("https://insult.mattbas.org/api/en_corporate/insult.json?who=Our+World+Class+Tech+Experts&plural=on")
-    .then(res => res.json())
-    .then(data => document.getElementById('insult').innerText = `${data.insult}. `);
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            let numMoves = 0;
-            let timeoutDone = false;
-
-            let audio = (typeof(Audio) !== 'undefined') ? new Audio("engineer_no01.mp3") : null;
-            $(".box-bounds").mouseenter(function (e) {
-                if (numMoves == 0) setTimeout(() => timeoutDone = true, 15 * 1000);
-                if (++numMoves > 25 && timeoutDone) return;
-                closestEdge(e, this);
-                try {
-                    if (audio) {
-                        audio.play();
-                    }
-                } catch(e) {}
-            });
-        });
-
-        document.getElementById("submit").addEventListener("click", function () {
-            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-        });
-
-        function moveDiv(mouse, edge, elem) {
-            const width = $(elem).outerWidth();
-            const height = $(elem).outerHeight();
-
-            switch (edge) {
-                case "left":
-                    $(elem).css({
-                        left: mouse.pageX + 50
-                    });
-                    break;
-                case "right":
-                    $(elem).css({
-                        left: mouse.pageX - width - 50
-                    });
-                    break;
-                case "top":
-                    $(elem).css({
-                        top: mouse.pageY + 50
-                    });
-                    break;
-                case "bottom":
-                    $(elem).css({
-                        top: mouse.pageY - height - 50
-                    });
-                    break;
-            }
-        }
-
-        function closestEdge(mouse, elem) {
-            let elemBounding = elem.getBoundingClientRect();
-
-            let elementLeftEdge = elemBounding.left;
-            let elementTopEdge = elemBounding.top;
-            let elementRightEdge = elemBounding.right;
-            let elementBottomEdge = elemBounding.bottom;
-
-            let mouseX = mouse.clientX;
-            let mouseY = mouse.clientY;
-
-            let topEdgeDist = Math.abs(elementTopEdge - mouseY);
-            let bottomEdgeDist = Math.abs(elementBottomEdge - mouseY);
-            let leftEdgeDist = Math.abs(elementLeftEdge - mouseX);
-            let rightEdgeDist = Math.abs(elementRightEdge - mouseX);
-
-            let min = Math.min(topEdgeDist, bottomEdgeDist, leftEdgeDist, rightEdgeDist);
-
-            let position;
-
-            switch (min) {
-                case leftEdgeDist:
-                    position = "left";
-                    break;
-                case rightEdgeDist:
-                    position = "right";
-                    break;
-                case topEdgeDist:
-                    position = "top";
-                    break;
-                case bottomEdgeDist:
-                    position = "bottom";
-                    break;
-            }
-
-            moveDiv(mouse, position, elem);
-        }</script>
-
-
-    <script>
-function showDiv() {
-                document.getElementById('welcomeDiv').style.display = "block";
-                var element = document.getElementById("myprogressBar");
-                var width = 1;
-                var identity = setInterval(scene, 10);
-                function scene() {
-                  if (width >= 100) {
-                    clearInterval(identity);
-                  } else {
-                    width++;
-                    element.style.width = width + '%';
-                    element.innerHTML = width * 1  + '%';
+              document.addEventListener("keypress", function (e) {
+                  if (e.keyCode == "13") {
+                      appendChatBox(true);
                   }
+              })
+
+              function appendChatBox(fromPerson) {
+                  const date = new Date()
+                  if (!fromPerson) {
+                      date.setSeconds(date.getSeconds() + 2)
+                  }
+                  if (fromPerson && !chatInput.value.trim()) {
+                      return;
+                  }
+                  const timestamp = date.toLocaleTimeString()
+                  const newChatDiv = chatTemplate({
+                      class: fromPerson ? "person" : "ai",
+                      text: fromPerson ? chatInput.value.trim() : aiResponse(),
+                      date: timestamp
+                  });
+                  if (!fromPerson) {
+                      // make it so it only responds once to multiple fast sentences
+                      setTimeout(function () {
+                          chatBox.innerHTML += newChatDiv;
+                          chatBox.scrollTop = chatBox.scrollHeight;
+                      }, 2000)
+                  } else {
+                      chatBox.innerHTML += newChatDiv;
+                      chatBox.scrollTop = chatBox.scrollHeight;
+                  }
+                  if (fromPerson) {
+                      chatInput.value = "";
+                      appendChatBox(false);
+                  }
+              }
+
+              function aiResponse() {
+                  const responseIndex = getRandomInt(0, responses.length - 1);
+                  const response = responses[responseIndex];
+                  return response;
+              }
+
+              function getRandomInt(min, max) {
+                  return Math.floor(Math.random() * (max - min + 1) + min);
+              }
+
+          }())</script>
+
+
+      <script>
+          fetch("https://insult.mattbas.org/api/en_corporate/insult.json?who=Our+World+Class+Tech+Experts&plural=on")
+              .then(res => res.json())
+              .then(data => document.getElementById('insult').innerText = `${data.insult}. `);
+      </script>
+
+
+      <script>
+    $(document).ready(function () {
+        let numMoves = 0;
+        let timeoutDone = false;
+
+        let audio = (typeof (Audio) !== 'undefined') ? new Audio("engineer_no01.mp3") : null;
+        $(".box-bounds").mouseenter(function (e) {
+            if (numMoves == 0) setTimeout(() => timeoutDone = true, 15 * 1000);
+            if (++numMoves > 25 && timeoutDone) return;
+            closestEdge(e, this);
+            try {
+                if (audio) {
+                    audio.play();
                 }
-             }
-
-
-        function triggerBackspace(el = document.activeElement) {
-            if (!el) return;
-            if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') return;
-            let value = el.value;
-            let selectionStart = el.selectionStart || value.length;
-            el.value = value.slice(0, selectionStart - 1) + value.slice(selectionStart);
-        }
-
-        function addTextToInput() {
-            console.error("Potato");
-
-            if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
-                document.activeElement.value = document.activeElement.value + "HELLO";
-            }
-            var allInputElements = document.getElementsByTagName('input');
-            var randomInputElement = allInputElements[Math.floor(Math.random() * allInputElements.length)];
-            randomInputElement.focus();
-
-        }
-
-        document.addEventListener('keydown', function (e) {
-            let target = e.target;
-            if (!target) return;
-            if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') return;
-            if (Math.random() < 0.05) {
-                e.preventDefault();
-                triggerBackspace(target);
-            } else if (e.key === ' ' || e.key === '.' || e.key === '-') {
-                addTextToInput();
-            }
+            } catch (e) { }
         });
-    </script>
+    });
 
-    <script>
-        function toggleMagicWordGif() {
-            if (document.getElementById('askNicely').style.display === 'none') {
-                document.getElementById('askNicely').style.display = 'block';
-            } else {
-                document.getElementById('askNicely').style.display = 'none';
-            }
+    document.getElementById("submit").addEventListener("click", function () {
+        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+    });
+
+    function moveDiv(mouse, edge, elem) {
+        const width = $(elem).outerWidth();
+        const height = $(elem).outerHeight();
+
+        switch (edge) {
+        case "left":
+            $(elem).css({
+                left: mouse.pageX + 50
+            });
+            break;
+        case "right":
+            $(elem).css({
+                left: mouse.pageX - width - 50
+            });
+            break;
+        case "top":
+            $(elem).css({
+                top: mouse.pageY + 50
+            });
+            break;
+        case "bottom":
+            $(elem).css({
+                top: mouse.pageY - height - 50
+            });
+            break;
         }
-    </script>
-    <script>
-            function toggleONOFF() {
-                if (document.getElementById('OnOff').style.display === 'none') {
-                    document.getElementById('OnOff').style.display = 'block';
-                } else {
-                    document.getElementById('OnOff').style.display = 'none';
-                }
-            }
-    </script>
+    }
 
-<script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("Jan 5, 2028 15:37:25").getTime();
+    function closestEdge(mouse, elem) {
+        let elemBounding = elem.getBoundingClientRect();
 
-    // Update the count down every 1 second
-    var x = setInterval(function() {
+        let elementLeftEdge = elemBounding.left;
+        let elementTopEdge = elemBounding.top;
+        let elementRightEdge = elemBounding.right;
+        let elementBottomEdge = elemBounding.bottom;
 
-        // Get today's date and time
-        var now = new Date().getTime();
+        let mouseX = mouse.clientX;
+        let mouseY = mouse.clientY;
 
-        // Find the distance between now and the count down date
-        var distance = countDownDate - now;
+        let topEdgeDist = Math.abs(elementTopEdge - mouseY);
+        let bottomEdgeDist = Math.abs(elementBottomEdge - mouseY);
+        let leftEdgeDist = Math.abs(elementLeftEdge - mouseX);
+        let rightEdgeDist = Math.abs(elementRightEdge - mouseX);
 
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        let min = Math.min(topEdgeDist, bottomEdgeDist, leftEdgeDist, rightEdgeDist);
 
-        // Output the result in an element with id="demo"
-        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
+        let position;
 
-        // If the count down is over, write some text
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
+        switch (min) {
+        case leftEdgeDist:
+            position = "left";
+            break;
+        case rightEdgeDist:
+            position = "right";
+            break;
+        case topEdgeDist:
+            position = "top";
+            break;
+        case bottomEdgeDist:
+            position = "bottom";
+            break;
         }
-    }, 1000);
-</script>
 
-    <script>
-        $('#priority').on('focusout', function (e) {
-            this.value = 'Actual';
-        });
-    </script>
-</body>
+        moveDiv(mouse, position, elem);
+    }</script>
+
+
+  <script>
+      function showDiv() {
+          document.getElementById('welcomeDiv').style.display = "block";
+          var element = document.getElementById("myprogressBar");
+          var width = 1;
+          var identity = setInterval(scene, 10);
+          function scene() {
+              if (width >= 100) {
+                  clearInterval(identity);
+              } else {
+                  width++;
+                  element.style.width = width + '%';
+                  element.innerHTML = width * 1 + '%';
+              }
+          }
+      }
+
+
+      function triggerBackspace(el = document.activeElement) {
+          if (!el) return;
+          if (el.tagName !== 'INPUT' && el.tagName !== 'TEXTAREA') return;
+          let value = el.value;
+          let selectionStart = el.selectionStart || value.length;
+          el.value = value.slice(0, selectionStart - 1) + value.slice(selectionStart);
+      }
+
+      function addTextToInput() {
+          console.error("Potato");
+
+          if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
+              document.activeElement.value = document.activeElement.value + ".";
+          }
+          var allInputElements = document.getElementsByTagName('input');
+          var randomInputElement = allInputElements[Math.floor(Math.random() * allInputElements.length)];
+          randomInputElement.focus();
+
+      }
+
+      document.addEventListener('keydown', function (e) {
+          let target = e.target;
+          if (!target) return;
+          if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') return;
+          if (Math.random() < 0.05) {
+              e.preventDefault();
+              triggerBackspace(target);
+          } else if (e.key === ' ' || e.key === '.' || e.key === '-') {
+              addTextToInput();
+          }
+      });
+  </script>
+
+  <script>
+      function toggleMagicWordGif() {
+          if (document.getElementById('askNicely').style.display === 'none') {
+              document.getElementById('askNicely').style.display = 'block';
+          } else {
+              document.getElementById('askNicely').style.display = 'none';
+          }
+      }
+  </script>
+  <script>
+      function toggleONOFF() {
+          if (document.getElementById('OnOff').style.display === 'none') {
+              document.getElementById('OnOff').style.display = 'block';
+          } else {
+              document.getElementById('OnOff').style.display = 'none';
+          }
+      }
+  </script>
+
+  <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Jan 5, 2028 15:37:25").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+
+          // Get today's date and time
+          var now = new Date().getTime();
+
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+              + minutes + "m " + seconds + "s ";
+
+          // If the count down is over, write some text
+          if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+      }, 1000);
+  </script>
+  <script>
+      $('#priority').on('focusout', function (e) {
+          this.value = 'Actual';
+      });
+  </script>
+  </body>
 </html>
