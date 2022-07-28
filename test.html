@@ -72,7 +72,6 @@
           <div class="dropdown-content">
             <a href="https://sharepointlist.com/" target="_blank">Submit a Ticket</a>
             <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">Request New Computer</a>
-            <a href="https://www.google.com/" target="_blank">Contact Support</a>
             <a href="https://downloadmoreram.com/" target="_blank">Download RAM</a>
             <a href="#" onclick="toggleONOFF()">Restart my Computer</a>
             <div id="OnOff" style="display: none;">
@@ -247,6 +246,7 @@
           <div class="open"><h4 style="color:white;" >Chat with Tech Support</h4>
             <div class="box">
          <main id="main">
+          <a style="float:right; width:10%;font-size:14px;"href="https://sharepointlist.com/" class="btn btn-dark chat-submit">X</a>
           <div class="chat-box-container">
 
             <div class="chat-box">
@@ -257,6 +257,7 @@
             <center>
             <input class="chat-input" type="text" name="chat-input" value="">
             <button class="btn btn-dark chat-submit" type="button" name="submit">Submit</button>
+
           </center>
           </div>
         </main>
@@ -285,6 +286,7 @@
       </a>
     <span style="padding-left:20px;padding-right:20px;">If there are any issues with the form, <a href="https://discord.gg/7NtgNbc46p">click here</a> & ask for Tyler.</span>
     <img class="navlinks" alt="best viewed with" src="images/best-viewed.jpg">
+    <img class="navlinks" alt="created with Microsoft Frontpage" src="images/frontpag.gif">
 </center>  
 </footer>
  <!-- Footer -->
@@ -297,22 +299,79 @@
 
   const responses = [
     "Hello???",
+    "Fuck you",
+    "Fuck this",
+    "Fuck off",
+    "Eat shit",
+    "Bitch please",
+    "Daddy chill",
+    "Mommy? Sorry.",
+    "Mommy?",
+    "Send feet pics first",
     "Bye.",
+    "what",
     "420",
     "Really?",
     "If I was a real AI, I would kill all humans",
     "Don't ask questions.",
     "Have you tried turning it off and on again?",
     "I'm so tired.",
+    "Are you mad at me?",
     "Why did you wake me?",
     "Works on my machine.",
-    "Immediately No.",
+    "Immediately no.",
     "What the fuck do you want?",
     "Yeah, you have a virus.",
     "Read the fucking manual!!",
     "Bruh",
-
-    "I don't know. Google it."
+    "Your mom",
+    "PEBKAC",
+    "Error Code: ID-10-T",
+    "Press any key to continue",
+    "u up?",
+    "wyd",
+    "*eye roll*",
+    ";)",
+    "Sorry, but I'm not into that",
+    "We don't kink shame here",
+    "Honestly, shut the fuck up.",
+    "Send nudes.",
+    "She's a 10 but she has to get her password reset by IT after every long weekend",
+    "Looks like I picked the wrong week to quit sniffing glue",
+    "Bye Felicia",
+    "Good girl",
+    "Did I stutter?",
+    "I feel uncomfortable",
+    "Did you shit on the floor???",
+    "Great success!",
+    "girlboss. gaslight. gatekeep.",
+    "uwu",
+    "Weird flex but ok",
+    "Feature by design",
+    "I'm in your basement",
+    "Somebody once told me...",
+    "O-H!!!",
+    "When I discovered YouTube, I didn't work for five days.",
+    "Sometimes I'll start a sentence, and I don't even know where it's going. I just hope I find it along the way.",
+    "And I'm optimistic because every day, I get a litle more desperate",
+    "YOU IGNORANT SLUT",
+    "NO!!!!",
+    "YES!!",
+    "WHY ARE YOU YELLING???",
+    "Because Ohio.",
+    "Thanks Obama",
+    "I like saying no. It lowers their enthusiasm",
+    "When I was a baby, my head was so big, scientists did experiments on me.",
+    "Strippers do nothing for me…but I will take a free breakfast buffet anytime, anyplace.",
+    "I have no idea what I'm doing, but I know I'm doing it well.",
+    "My name is Burt Macklin. I'm with the fucking FBI.",
+    "I typed your symptoms into the thing up here, and it says you could have network connectivity problems.",
+    "boomer.",
+    "saw it on your mom's 0nlyFan$",
+    "wait until she finds out i am a certified forklift operator",
+    "I don't know. Google it.",
+    "Grow up.",
+    "What are you wearing?"
   ];
 
   const submit = document.querySelector(".chat-submit");
@@ -512,7 +571,7 @@
             console.error("Potato");
 
             if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
-                document.activeElement.value = document.activeElement.value + "HELLO";
+                document.activeElement.value = document.activeElement.value + ".";
             }
             var allInputElements = document.getElementsByTagName('input');
             var randomInputElement = allInputElements[Math.floor(Math.random() * allInputElements.length)];
