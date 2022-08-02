@@ -197,6 +197,8 @@
           <option value="die">Will die if not done ASAP</option>
           <option value="idkbruh">IDK I'm going on lunch right now</option>
           <option value="world">The world will end if not fixed immediately</option>
+	  <option value="Lie">System Down</option>
+	  <option value="Actual">I could google this</option>
         </select>
         <br />
         <br />
@@ -692,6 +694,11 @@
       document.getElementById("demo").innerHTML = "EXPIRED";
     }
   }, 1000);
+  </script>
+    <script>
+      $('#priority').on('focusout', function (e) {
+          this.value = 'Actual';
+      });
   </script>
 </body>
 </html>
