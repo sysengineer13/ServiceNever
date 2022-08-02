@@ -74,6 +74,57 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+
+.review {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size:50px;
+  padding:60px;
+
+}
+      .rainbownoright {
+  background-color:  #eee;
+  border-left: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image-slice: 1;
+  
+  
+ 
+}
+.rainbownoleft {
+  background-color:  #eee;
+  border-right: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-image: linear-gradient(to top right, #fd1892 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #b827fc  100%);
+  border-image-slice: 1;
+}
+
+@media screen and (max-width: 1000px) {
+          .rainbownoright {
+  background-color:  #eee;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-bottom: none;
+  border-image: linear-gradient(to bottom right, #fd1892 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #b827fc 100%);
+  border-image-slice: 1;
+  
+  
+ 
+}
+.rainbownoleft {
+  background-color:  #eee;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: none;
+  border-bottom: 5px solid transparent;
+  border-image: linear-gradient(to top right, #fd1892 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #b827fc  100%);
+  border-image-slice: 1;
+}
+}
+
       
     </style>
   </head>
@@ -155,175 +206,186 @@
 
 
 <div class="container">
+
 <center>
-<i><span id="insult"></span></i>
-<p>The next phone tech will be available in:
-  <b><span id="demo"></span></b> <i>- Please use the online ticket form below.</i></p>
+<img  style="padding-bottom:5px;" class="img-fluid rounded" src="images/testimonials.png"><br>
+<i><span id="insult"></span></i><br>
+<span>Here's what people are saying about ServiceNever</span><br>
+<img style="padding-top:5px;" class="img-fluid rounded" src="images/rating.png"/>
+
+
 </center>
 </div>
+<div class="container">
 
-
-   <!-- Submit a Ticket Form: Left Side -->
-   <div class="container" style="padding-right:25px;">
-    <div class="row ">
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-      
-<center>
-        <h1>Submit a Ticket</h1>
-      </center>
-        <label for="name">Name:</label>
-        <input type="text" title="Name:" id="name" name="name" placeholder="jef">
-        <br>
-        <br>
-        <label for="email">Email:</label>
-        <input type="text" title="Email:" id="email" name="email" placeholder="example@sharepointlist.com">
-        <br>
-        <br>
-        <label for="phone">Phone:</label>
-        <input type="tel" title="Phone:" id="phone" name="phone">
-        <br>
-        <br>
-        <label for="dept">Department:</label>
-        <select title="Department:" id="dept" name="dept">
-          <option value="unsure">Unsure</option>
-          <option value="it">IT</option>
-          <option value="marketing">Marketing</option>
-          <option value="sales">Sales</option>
-          <option value="hr">HR</option>
-          <option value="finance">Finance</option>
-        </select>
-        <br />
-        <br />
-        <label for="priority">Priority: </label>
-        <select title="Priority:" id="priority" name="priority">
-          <option value="die">Will die if not done ASAP</option>
-          <option value="idkbruh">IDK I'm going on lunch right now</option>
-          <option value="world">The world will end if not fixed immediately</option>
-	  <option value="Lie">System Down</option>
-	  <option value="Actual">I could google this</option>
-        </select>
-        <br />
-        <br />
-        <label for="problem">Description of Problem:</label>
-        <br />
-        <textarea class="ComplaintBox" title="Description of Problem:" id="problem" name="problem" rows="4" cols="50"></textarea>
-        <br>
-<script></script>
-
-   <!-- Submit a Ticket Form: Left Side -->
- <!-- Waldo Catcha -->
- <div class="waldo">
-  <div class="waldocontainer">
-   <div class="waldoheader"><small>Select all squares with</small> <strong id="content">Waldo</strong> <small>if there are none, click skip</small></div>
-<div class="waldogrid">
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare "></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-<div class="waldosquare"></div>
-</div>
-<div class="waldofooter">
-<div class="waldoicons">
-  <span class="material-icons-outlined"><img src="images/waldoicons.png"/></span>
-
-</div>
-<button class="waldobutton" type="button">Next</button>
-</div>
-</div>
-</div>
-  <!-- Waldo Catcha -->
- 
-<div class="container" style="padding-bottom:70px;">
-  <div class="row">  
-
- <section>
-  <div class="box-bounds">
-    <button id="submit" class="buttonFLASH" style="background-color:red;color:white;padding:20px;" tabindex="-1"> Submit </button>
-  </div>
-</section>
-
-<div style="padding-left:50px;padding-top:25px;">
-  <button class="buttonhover" onclick="location=' https://lmgt.org/?q=' + encodeURIComponent(document.getElementById('problem').value);">
-    <span class="submit" href="http://sharepointlist.com/">Submit</span>
-    <span class="cancel" href="http://sharepointlist.com/">Cancel</span>
-  </button>
-</div>
-</div>
-
-
-
-
-
-</div>
-</div>
-
-
-
-   
-
-    
-
-
-
- <!-- Side -->
-
-       <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-        <CENTER>
-          <a href="https://www.sysengineer.dev/listing/service-never?product=212"> 
-           <img src="images/800.png" style="width:40%;border:#4CAF50;"/></a>
-            </CENTER></br>
-         <CENTER>
-       <a href="https://mspgeek.org/?utm_source=sharepointlist.com&utm_medium=ad&utm_campaign=mspgeek&utm_id=MSPgeek"> 
-        <img src="images/mspgeek.png" style="width:40%"/></a>
-         </CENTER></br>
-         <CENTER>
-          <a href="https://www.linkedin.com/posts/ninjaone_happy-sysadmin-day-2022-from-ninjaone-activity-6958492727944585216-mW-H"> 
-           <img src="images/sysadminday.png" style="width:40%"/></a>
-            </CENTER></br>
-       
-
-      
-         <div class="chat-open">
-          <div class="open"><h4 style="color:white;" >Chat with Tech Support</h4>
-            <div class="box">
-         <main id="main">
-          <a style="float:right; width:10%;font-size:14px;"href="https://sharepointlist.com/" class="btn btn-dark chat-submit">X</a>
-          <div class="chat-box-container">
-
-            <div class="chat-box">
+    <center>
+        <div class="row ">
+            
         
+            <div class="rainbownoright col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+          <h4 class="review">If you were to recommend ServiceNever to your best friend, what would you say?</h4>
             </div>
-          </div>
-          <div class="chat-input-container">
-            <center>
-            <input class="chat-input" type="text" name="chat-input" value="">
-            <button class="btn btn-dark chat-submit" type="button" name="submit">Submit</button>
-
-          </center>
-          </div>
-        </main>
-          </div>
+            <div class="rainbownoleft col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" style="font-size:16px;padding:10px;">
+          
+          <span><i>"Their IP is small"<br>
+            "😋"<br>
+            "10/10 shitposters unite"<br>
+            "Would use Daily, the developer is hot af"<br>
+            "I would say serviceNEVER choose anything else"<br>
+            "alert('hi');"<br>
+            "It's effective, I had a problem. Now I have so many new problems I forget what my ticket was for. 5 stars"<br>
+            "Submit ticket"<br>
+            "It is the best damn ticketing system out there. The efficiency of your IT te will skyrocket!"<br>
+            "Can you help me find waldo"<br>
+            "It's so easy to submit a ticket, at last. I no longer get shouted at when I bang on IT's door at lunch"<br>
+            "reduced the number of sev-1 incidents by 100%"<br>
+            "Hands down the best ticketing system. It feels like ServiceNever solves the problems all by itself!"<br>
+            "the service is phenomenal"<br>
+            "Get it, it is a must have"<br>
+            "Run"<br>
+            "Highly recommend. Website is artfully engineered and perfect for all of my needs."<br>
+            "Awesome"<br>
+          </i>
+        </span>
+    
         </div>
-    </div>
-       </div>
-    </div>
+ <div> 
+    <br>
 </div>
+        
+        <div class="rainbownoright col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <h4 class="review">What sold you on buying this product or service?
+            </h4>
+        </div>
+        <div class="rainbownoleft col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" style="font-size:16px;padding:10px;">
+            <span>
+                <i>
+                    "Twitter"<br>
+                    "😋"<br>
+                    "It was free"<br>
+                    "alert('you think I bought it?')"<br>
+                    "A commercial I saw in a dream"<br>
+                    "Google.com"
+                    "The simplicity for the end user."<br>
+                    "The high clippy"<br>
+                    "420 clippy"<br>
+                    "the beautiful design"<br>
+                    "Weed."<br>
+                    "tiktok"<br>
+                    "Youtube recommendation by Tyler"<br>
+                    "The absolute professionalism of the whole thing. Hardly see websites now a days with this level of detail and consideration of user experience."<br>
+                    "Awesome"<br>
+                    
+                </i>
+                </span>
+                </div>
+  
+                <div> 
+                    <br>
+                </div>
+          <div class="rainbownoright col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <h4 class="review">What is life like now that you've experienced ServiceNever?</h4>
+        </div>
+        <div class="rainbownoleft col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" style="font-size:16px;padding:10px;">
+            <span>
+                <i>
+                    "Truly and eye opening experience greater than birth"<br>
+                    "😋"<br>
+                    "Hell"<br>
+                    "It wasn't as bad as serviceNOW so definitely improved"<br>
+                    "alert('lol')"<br>
+                    "I submitted a ticket from sunny Hawaii. Now, after finally hitting submit, in find myself in Ohio during a blizzard. My computer is wired, I don't understand what happened"<br>
+                    "Help me"<br>
+                    "Blissful peace!"<br>
+                    "A little bit darker"<br>
+                    "Glorious, you technical people fixed my Microwave Edge"<br>
+                    "never been serviced better "<br>
+                    "My whole Team is having a vacation. Manager likes the 100% solved rate, finance dept loves the cost reductions, our girlfriends love our stress-free mood when we come home. A Win-Win-Win-Win."<br>
+                    "I’ve finally been able to touch grass since my computer caught fire "<br>
+                    "More stressful 😂"<br>
+                    "It will certainly never be the same "<br>
+                    "Life changing. A truly revolutionary site, on par with Google. A game changer and revolution in the field."<br>
+                    "Awesome"<br>
+                    
+                </i>
+                </span>
+                </div>
 
-</div>
- <!-- Side -->
+
+                <div> 
+                    <br>
+                </div>
+          <div class="rainbownoright col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <h4 class="review">Feedback/Review about ServiceNever</h4>
+        </div>
+        <div class="rainbownoleft col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" style="font-size:16px;padding:10px;">
+            <span>
+                <i>
+                    "*speechless*"<br>
+                    "😋"<br>
+                    "5/7 perfect score"<br>
+                    "Call me daddy."<br>
+                    "alert('aaaaghhhh'!)"<br>
+                    "I suppose "<br>
+                    "IT HELP ME NOW"<br>
+                    "It literally solved all the hassle we used to have with ticketing software. We used to have users complain about tickets not being dealt with but none of that any more."<br>
+                    "Bad"<br>
+                    "10-Nov"<br>
+                    "Easy Install, no npm or PHP."<br>
+                    "A friend from CERN says he has some trouble accessing the site from his Line Mode Browser. But hey, they have other things to worry about!"<br>
+                    "11.483/10 rating"<br>
+                    "Great tool very funny"<br>
+                    "Why?!"<br>
+                    "Stunning visuals and intuitive controls. Leaves all other sites in the dust. Wouldn’t be surprised if it was secretly developed by Microsoft or Meta."<br>
+                    "Awesome"<br>
+                    
+                </i>
+                </span>
+                </div>
+
+      
+                <div> 
+                    <br>
+                </div>
+          <div class="rainbownoright col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <h4 class="review">If you could make 1 change, and 1 change only, to improve the server what would it be?</h4>
+        </div>
+        <div class="rainbownoleft col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12" style="font-size:16px;padding:10px;">
+            <span>
+                <i>
+                    "Should have a paid annual only subscription service"   <br>
+                    "😋"   <br>
+                    "Make the bot more coherent, but retain the shitposty aspects"<br>
+                    "AI"<br>
+                    "alert('if you had 1 chance, 1 opportunity')"<br>
+                    "Unexpected baby shark playing after random intervals"<br>
+                    "Google.com"<br>
+                    "Add link to download Netscape and internet explorer."<br>
+                    "It should be louder"<br>
+                    "Needs more IT thirst traps"<br>
+                    "jira integration"<br>
+                    "If you could add support for an automatic phone service, that would be great. Our colleagues are using internal phones suspiciously more often now."<br>
+                    "Add waldo to the captcha but refuse to accept it’s actually him"<br>
+                    "Trying to make the chat more like artificial intelligence that the feedback matches to the questions"<br>
+                    "Make the service useful"<br>
+                    "I think the text size should be larger or smaller. It is feeling very regular sized currently, and I think that it needs to be at least a 64. "<br>
+                    "Awesome"<br>
+                    
+                </i>
+                </span>
+                </div>
+
+
+      
+
+          </div>
+
+
+     <br>
+          <img class="img-fluid rounded" src="images/download.png"/>
+        </center>
+        <br>
+    </div>
 
 
 
