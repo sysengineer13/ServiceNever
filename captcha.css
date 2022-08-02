@@ -120,3 +120,19 @@
     margin-bottom: 0;
   }
   
+  .waldogridafter {
+    display: grid;
+    grid-template-columns: repeat(6, 65px);
+    grid-template-rows: repeat(3, 65px);
+    background-color: tomato;
+    background-image: url(images/waldo2.png);
+    background-position: contain;
+    background-size: 384px;
+  }
+  .mystyle {
+    width: 100%;
+    padding: 25px;
+    background-color: coral;
+    color: white;
+    font-size: 25px;
+  }

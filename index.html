@@ -53,7 +53,17 @@
       gtag('js', new Date());
       gtag('config', 'G-EC3PK322B1');
     </script>
+       <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <style>
+       .selectt {
+       
+            display: none;
+        
+     
+        }
+          
+    
+
       #Progress_Status {
         width: 50%;
         background-color: #ddd;
@@ -74,7 +84,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      
+      #text {display:none;color:red}
     </style>
   </head>
   <body>
@@ -173,6 +183,20 @@
       </center>
         <label for="name">Name:</label>
         <input type="text" title="Name:" id="name" name="name" placeholder="jef">
+  
+        <div id="text" style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/2oUfvvUgQHnLsQWFMW" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+        <script>
+          var input = document.getElementById("name");
+          var text = document.getElementById("text");
+          input.addEventListener("keyup", function(event) {
+          
+          if (event.getModifierState("CapsLock")) {
+              text.style.display = "block";
+            } else {
+              text.style.display = "none"
+            }
+          });
+          </script>
         <br>
         <br>
         <label for="email">Email:</label>
@@ -204,6 +228,36 @@
         </select>
         <br />
         <br />
+
+        <label for="restart">Have tried turning it off and on again?</label><br>
+        <div>
+          <label>
+              <input type="checkbox" name="colorCheckbox" 
+                     value="Yes"> Yes</label>
+          <label>
+              <input type="checkbox" name="colorCheckbox" 
+                     value="No"> No</label>
+     
+      </div>
+      <div class="Yes selectt">
+        <iframe src="https://giphy.com/embed/WZOffTa9X1FZe" width="470" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      </div>
+      <div class="No selectt">
+        <iframe src="https://giphy.com/embed/BjHIjM2YFC3rEUaMrw" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      </div>
+     
+      <script type="text/javascript">
+          $(document).ready(function() {
+              $('input[type="checkbox"]').click(function() {
+                  var inputValue = $(this).attr("value");
+                  $("." + inputValue).toggle();
+              });
+          });
+      </script>
+
+
+  
+        <br />
         <label for="problem">Description of Problem:</label>
         <br />
         <textarea class="ComplaintBox" title="Description of Problem:" id="problem" name="problem" rows="4" cols="50"></textarea>
@@ -215,7 +269,7 @@
  <div class="waldo">
   <div class="waldocontainer">
    <div class="waldoheader"><small>Select all squares with</small> <strong id="content">Waldo</strong> <small>if there are none, click skip</small></div>
-<div class="waldogrid">
+<div id="waldogrid" class="waldogrid">
 <div class="waldosquare"></div>
 <div class="waldosquare"></div>
 <div class="waldosquare"></div>
@@ -240,7 +294,18 @@
   <span class="material-icons-outlined"><img src="images/waldoicons.png"/></span>
 
 </div>
-<button class="waldobutton" type="button">Next</button>
+<button class="waldobutton" id="waldobutton" onclick="myFunction()" type="button">Next</button>
+
+
+
+<script>
+  function myFunction() {
+   var element = document.getElementById("waldogrid");
+   element.classList.add("waldogridafter");
+   element.classList.add("waldogrid");
+
+} </script>
+
 </div>
 </div>
 </div>
@@ -346,7 +411,6 @@
 
 </footer>
  <!-- Footer -->
-
 
 
  <script>(function() {
