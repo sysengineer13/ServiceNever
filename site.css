@@ -27,7 +27,8 @@ footer {
 
 .navlinks {
   font-size: 18px;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: 'Comic Sans';
+  font-style: normal;
   padding: 10px;
   text-decoration: none;
 }
