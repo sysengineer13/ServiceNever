@@ -27,8 +27,7 @@ footer {
 
 .navlinks {
   font-size: 18px;
-  font-family: 'Comic Sans';
-  font-style: normal;
+  font-family: "Comic Sans MS", "Comic Sans";
   padding: 10px;
   text-decoration: none;
 }
@@ -219,7 +218,7 @@ footer {
 /* Dropdown Button */
 .dropbtn {
   background-color: #04AA6D;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Comic Sans MS", "Comic Sans";
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -235,7 +234,7 @@ footer {
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   white-space: nowrap;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Comic Sans MS", "Comic Sans";
   display: none;
   position: absolute;
   background-color: #f1f1f1;
