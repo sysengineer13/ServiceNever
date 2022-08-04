@@ -45,16 +45,6 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC3PK322B1"></script>
     <script>
-
-      //dark mode goodness
-      //detect if user is using dark mode as they should
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches){
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-        var navContainer = document.getElementById("navcontainer");
-        navContainer.classList.toggle("dark-mode");
-
-      }
       window.dataLayer = window.dataLayer || [];
 
       function gtag() {
@@ -775,6 +765,21 @@
       $('#priority').on('focusout', function (e) {
           this.value = 'Actual';
       });
+  </script>
+  <script>
+      //dark mode goodness
+      //detect if user is using dark mode as they should
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches){
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        var navContainers = document.getElementsByClassName("navcontainer");
+        for (var i =0; i < navContainers.length; i++){
+          var navContainer = navContainers[i];
+          navContainer.classList.toggle("dark-mode");
+        }
+        document.getElementsByTagName("footer")[0].classList.toggle("dark-mode");
+
+      }
   </script>
 </body>
 </html>
