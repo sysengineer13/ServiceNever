@@ -40,7 +40,10 @@ footer {
 
 }
 
-
+.dark-mode {
+  background-color: black;
+  color: white;
+}
 
 .buttonFLASH {
   background-color: #004A7F;
