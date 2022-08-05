@@ -36,6 +36,8 @@
     crossorigin="anonymous"></script>
     <script src="CAPTCHA.js"></script>
     <script src="chat.js"></script>
+    <script src="phone.js"></script>
+
     <link rel="stylesheet" href="chat.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
@@ -104,7 +106,7 @@
    
       
     
-
+      <a href="http://www.cornify.com" onclick="cornify_add();return false;" title="Cornify"><img src="https://www.cornify.com/assets/cornify-button.png" width="82" height="25" border="0" alt="Cornify" /></a><script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
 
         <div class="dropdown navlinks">
           <button class="dropbtn">Helpful Resources</button>
@@ -169,6 +171,13 @@
 <i><span id="insult"></span></i>
 <p>The next phone tech will be available in:
   <b><span id="demo"></span></b> <i>- Please use the online ticket form below.</i></p>
+  <!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+  <img src="https://hitwebcounter.com/counter/counter.php?page=8023430&style=0027&nbdigits=5&type=page&initCount=7881" title="Free Counter" Alt="web counter"   border="0" /></a> people have viewed this site to submit a ticket.                                   
+                                      
+                                          
+                                            
+                              
 </center>
 </div>
 
@@ -203,8 +212,15 @@
         <input type="text" title="Email:" id="email" name="email" placeholder="example@sharepointlist.com">
         <br>
         <br>
+   
         <label for="phone">Phone:</label>
-        <input type="tel" title="Phone:" id="phone" name="phone">
+        <select class="short-number-ps"></select>
+        <select class="short-number-ps"></select>
+        <select class="long-number-ps"></select>
+
+
+
+
         <br>
         <br>
         <label for="dept">Department:</label>
@@ -346,6 +362,7 @@
  <!-- Side -->
 
        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        
         <CENTER>
           <a href="https://www.sysengineer.dev/listing/service-never?product=212"> 
            <img src="images/800.png" style="width:40%;border:#4CAF50;"/></a>
@@ -376,6 +393,7 @@
             <center>
             <input class="chat-input" type="text" name="chat-input" value="">
             <button class="btn btn-dark chat-submit" type="button" name="submit">Submit</button>
+            
 
           </center>
           </div>
@@ -765,6 +783,47 @@
       $('#priority').on('focusout', function (e) {
           this.value = 'Actual';
       });
+  </script>
+
+  <script>
+    //phone number script ///
+
+function numberGenerator(){
+  
+  var randomPhoneNumber = Math.floor((Math.random() * 1000));
+    if (randomPhoneNumber < 10){
+      return ("00" + randomPhoneNumber);
+    } else if (randomPhoneNumber < 100) {
+      return ("0" + randomPhoneNumber);
+    } else {
+      return randomPhoneNumber;
+    }
+}
+function numberGeneratorLong(){
+
+  var randomPhoneNumber = Math.floor((Math.random() * 10000));
+    if (randomPhoneNumber < 10){
+      return ("000" + randomPhoneNumber);
+    } else if (randomPhoneNumber < 100) {
+      return ("00" + randomPhoneNumber);
+    } else if (randomPhoneNumber < 1000) {
+      return ("0" + randomPhoneNumber);
+    } else {
+      return randomPhoneNumber;
+    }
+}
+$(function() {
+var $selector = $(".long-number-ps");
+var $shortSelector = $(".short-number-ps");
+
+  for (var i = 1; i < 10000; i++){
+    $selector.append($('<option></option>').val(i).html(i))
+  }
+
+  for (var i = 1; i < 1000; i++){
+    $shortSelector.append($('<option></option>').val(i).html(i))
+  }
+});
   </script>
 </body>
 </html>

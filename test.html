@@ -1,16 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    
+  
    <!-- Chrissy Wake Up -->
-    <meta charset="utf-8" />
+    
+    <!-- unfurl goodness -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="ServiceNever is a help desk ticketing system. Designed by IT for IT.">
+    <meta name="author" content="Sysengineer">
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://sharepointlist.com/" />
+    <meta property="og:title" content="ServiceNever" />
+    <meta property="og:description" content="ServiceNever is a help desk ticketing system. Service No-, I mean Never, is just as useful as a SharePoint list. Designed by IT for IT." />
+    <meta property="og:image" content="https://sharepointlist.com/images/leLogo.png" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" value="https://sharepointlist.com/" />
+    <meta name="twitter:title" value="ServiceNever" />
+    <meta name="twitter:description" value="ServiceNever is a help desk ticketing system. Service No-, I mean Never, is just as useful as a SharePoint list. Designed by IT for IT." />
+    <meta name="twitter:image" content="https://sharepointlist.com/images/leLogo.png" />
+    <meta name="twitter:url" value="https://sharepointlist.com/" />
+    
+    
+    
     <title>Service Never - Helpdesk Ticket System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/webp" href="images/favicon.webp">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="site.css">
     <link rel="stylesheet" href="captcha.css">
-
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6871418367983282"
+    crossorigin="anonymous"></script>
     <script src="CAPTCHA.js"></script>
     <script src="chat.js"></script>
+    <script src="phone.js"></script>
+
     <link rel="stylesheet" href="chat.css">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
@@ -28,7 +55,17 @@
       gtag('js', new Date());
       gtag('config', 'G-EC3PK322B1');
     </script>
+       <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <style>
+       .selectt {
+       
+            display: none;
+        
+     
+        }
+          
+    
+
       #Progress_Status {
         width: 50%;
         background-color: #ddd;
@@ -49,7 +86,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      
+      #text {display:none;color:red}
     </style>
   </head>
   <body>
@@ -65,8 +102,12 @@
   <!-- Navigation -->
   <center>
     <div class="navcontainer">
-        <a class="navlinks" href="https://github.com/sysengineer13/ServiceNever" target="_blank">ServiceNever.Git</a>
+
+   
       
+    
+      <a href="http://www.cornify.com" onclick="cornify_add();return false;" title="Cornify"><img src="https://www.cornify.com/assets/cornify-button.png" width="82" height="25" border="0" alt="Cornify" /></a><script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+
         <div class="dropdown navlinks">
           <button class="dropbtn">Helpful Resources</button>
           <div class="dropdown-content">
@@ -82,6 +123,19 @@
           </div>
 
         </div>
+        <div class="dropdown navlinks">
+          <button class="dropbtn" style="background-color:#FC8E17;">About</button>
+          <div class="dropdown-content">
+            <a href="https://github.com/sysengineer13/ServiceNever"" target="_blank">ServiceNever.Git</a>
+            <a href="https://sharepointlist.com/feedback.html" target="_blank">Submit Feedback</a>
+            <a href="https://discord.gg/RRQqWKDDeR" target="_blank">Discord</a>
+            <a href="https://www.sysengineer.dev/" target="_blank">Merch</a>
+            <a href = "mailto: info@sysengineer.dev">Send Email</a>
+          </div>
+
+        </div>
+        <a href="about.html" target="_blank" style="text-decoration:none;">About ServiceNever</a>
+
       </div>
     </center>
   <!-- Navigation -->
@@ -117,6 +171,13 @@
 <i><span id="insult"></span></i>
 <p>The next phone tech will be available in:
   <b><span id="demo"></span></b> <i>- Please use the online ticket form below.</i></p>
+  <!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com" target="_blank">
+  <img src="https://hitwebcounter.com/counter/counter.php?page=8023430&style=0027&nbdigits=5&type=page&initCount=7881" title="Free Counter" Alt="web counter"   border="0" /></a> people have viewed this site to submit a ticket.                                   
+                                      
+                                          
+                                            
+                              
 </center>
 </div>
 
@@ -131,14 +192,35 @@
       </center>
         <label for="name">Name:</label>
         <input type="text" title="Name:" id="name" name="name" placeholder="jef">
+  
+        <div id="text" style="width:100%;height:0;padding-bottom:83%;position:relative;"><iframe src="https://giphy.com/embed/2oUfvvUgQHnLsQWFMW" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+        <script>
+          var input = document.getElementById("name");
+          var text = document.getElementById("text");
+          input.addEventListener("keyup", function(event) {
+          
+          if (event.getModifierState("CapsLock")) {
+              text.style.display = "block";
+            } else {
+              text.style.display = "none"
+            }
+          });
+          </script>
         <br>
         <br>
         <label for="email">Email:</label>
         <input type="text" title="Email:" id="email" name="email" placeholder="example@sharepointlist.com">
         <br>
         <br>
+   
         <label for="phone">Phone:</label>
-        <input type="tel" title="Phone:" id="phone" name="phone">
+        <select class="short-number-ps"></select>
+        <select class="short-number-ps"></select>
+        <select class="long-number-ps"></select>
+
+
+
+
         <br>
         <br>
         <label for="dept">Department:</label>
@@ -157,8 +239,40 @@
           <option value="die">Will die if not done ASAP</option>
           <option value="idkbruh">IDK I'm going on lunch right now</option>
           <option value="world">The world will end if not fixed immediately</option>
+	  <option value="Lie">System Down</option>
+	  <option value="Actual">I could google this</option>
         </select>
         <br />
+        <br />
+
+        <label for="restart">Have tried turning it off and on again?</label><br>
+        <div>
+          <label>
+              <input type="checkbox" name="colorCheckbox" 
+                     value="Yes"> Yes</label>
+          <label>
+              <input type="checkbox" name="colorCheckbox" 
+                     value="No"> No</label>
+     
+      </div>
+      <div class="Yes selectt">
+        <iframe src="https://giphy.com/embed/WZOffTa9X1FZe" width="470" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      </div>
+      <div class="No selectt">
+        <iframe src="https://giphy.com/embed/BjHIjM2YFC3rEUaMrw" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      </div>
+     
+      <script type="text/javascript">
+          $(document).ready(function() {
+              $('input[type="checkbox"]').click(function() {
+                  var inputValue = $(this).attr("value");
+                  $("." + inputValue).toggle();
+              });
+          });
+      </script>
+
+
+  
         <br />
         <label for="problem">Description of Problem:</label>
         <br />
@@ -171,7 +285,7 @@
  <div class="waldo">
   <div class="waldocontainer">
    <div class="waldoheader"><small>Select all squares with</small> <strong id="content">Waldo</strong> <small>if there are none, click skip</small></div>
-<div class="waldogrid">
+<div id="waldogrid" class="waldogrid">
 <div class="waldosquare"></div>
 <div class="waldosquare"></div>
 <div class="waldosquare"></div>
@@ -196,7 +310,18 @@
   <span class="material-icons-outlined"><img src="images/waldoicons.png"/></span>
 
 </div>
-<button class="waldobutton" type="button">Next</button>
+<button class="waldobutton" id="waldobutton" onclick="myFunction()" type="button">Next</button>
+
+
+
+<script>
+  function myFunction() {
+   var element = document.getElementById("waldogrid");
+   element.classList.add("waldogridafter");
+   element.classList.add("waldogrid");
+
+} </script>
+
 </div>
 </div>
 </div>
@@ -237,11 +362,22 @@
  <!-- Side -->
 
        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        
+        <CENTER>
+          <a href="https://www.sysengineer.dev/listing/service-never?product=212"> 
+           <img src="images/800.png" style="width:40%;border:#4CAF50;"/></a>
+            </CENTER></br>
          <CENTER>
        <a href="https://mspgeek.org/?utm_source=sharepointlist.com&utm_medium=ad&utm_campaign=mspgeek&utm_id=MSPgeek"> 
-        <img src="images/mspgeek.png" style="width:35%"/></a>
+        <img src="images/mspgeek.png" style="width:40%"/></a>
          </CENTER></br>
-         
+         <CENTER>
+          <a href="https://www.linkedin.com/posts/ninjaone_happy-sysadmin-day-2022-from-ninjaone-activity-6958492727944585216-mW-H"> 
+           <img src="images/sysadminday.png" style="width:40%"/></a>
+            </CENTER></br>
+       
+
+      
          <div class="chat-open">
           <div class="open"><h4 style="color:white;" >Chat with Tech Support</h4>
             <div class="box">
@@ -257,6 +393,7 @@
             <center>
             <input class="chat-input" type="text" name="chat-input" value="">
             <button class="btn btn-dark chat-submit" type="button" name="submit">Submit</button>
+            
 
           </center>
           </div>
@@ -284,13 +421,14 @@
     <a href="https://sociall.link/sysengineer">
         <img alt="microwave edge" src="images/Microwave Edge.png" height="100" />
       </a>
-    <span style="padding-left:20px;padding-right:20px;">If there are any issues with the form, <a href="https://discord.gg/7NtgNbc46p">click here</a> & ask for Tyler.</span>
+    <span style="padding-left:20px;padding-right:10px;">If there are any issues with the form, <a href="https://discord.gg/RRQqWKDDeR">click here</a> & ask for Tyler.</span>
+
     <img class="navlinks" alt="best viewed with" src="images/best-viewed.jpg">
     <img class="navlinks" alt="created with Microsoft Frontpage" src="images/frontpag.gif">
-</center>  
+</center> 
+
 </footer>
  <!-- Footer -->
-
 
 
  <script>(function() {
@@ -640,6 +778,52 @@
       document.getElementById("demo").innerHTML = "EXPIRED";
     }
   }, 1000);
+  </script>
+    <script>
+      $('#priority').on('focusout', function (e) {
+          this.value = 'Actual';
+      });
+  </script>
+
+  <script>
+    //phone number script ///
+
+function numberGenerator(){
+  
+  var randomPhoneNumber = Math.floor((Math.random() * 1000));
+    if (randomPhoneNumber < 10){
+      return ("00" + randomPhoneNumber);
+    } else if (randomPhoneNumber < 100) {
+      return ("0" + randomPhoneNumber);
+    } else {
+      return randomPhoneNumber;
+    }
+}
+function numberGeneratorLong(){
+
+  var randomPhoneNumber = Math.floor((Math.random() * 10000));
+    if (randomPhoneNumber < 10){
+      return ("000" + randomPhoneNumber);
+    } else if (randomPhoneNumber < 100) {
+      return ("00" + randomPhoneNumber);
+    } else if (randomPhoneNumber < 1000) {
+      return ("0" + randomPhoneNumber);
+    } else {
+      return randomPhoneNumber;
+    }
+}
+$(function() {
+var $selector = $(".long-number-ps");
+var $shortSelector = $(".short-number-ps");
+
+  for (var i = 1; i < 10000; i++){
+    $selector.append($('<option></option>').val(i).html(i))
+  }
+
+  for (var i = 1; i < 1000; i++){
+    $shortSelector.append($('<option></option>').val(i).html(i))
+  }
+});
   </script>
 </body>
 </html>

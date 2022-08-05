@@ -447,3 +447,48 @@ main {
   background: linear-gradient(to top right, #33ccff 0%, #ff99cc 100%);
   color: black;
 }
+
+
+
+
+.text-center {
+  text-align: center; }
+
+#phone-generator {
+  width: 500px;
+  border: 1px solid grey;
+  padding: 15px 20px;
+  margin: 0px auto; }
+
+.button-positioner {
+  position: relative;
+  text-align: center;
+  width: 500px; }
+
+.phone-number {
+  display: inline-block;
+  font-size: 32px; }
+
+.select-button {
+  border: 2px solid red;
+  background-color: green;
+  color: red;
+  border-radius: 5px;
+  padding: 15px 15px; }
+
+.select-button:hover {
+  border: 2px solid green;
+  color: green;
+  background-color: red; }
+
+#phone-select {
+  margin: 50px auto;
+  width: 500px;
+  border: 1px solid grey; }
+
+#phone-select-row {
+  text-align: center; }
+
+#phone-select-button {
+  margin: 10px 0px;
+  text-align: center; }
