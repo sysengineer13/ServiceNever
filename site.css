@@ -1,4 +1,5 @@
 @import url('http://fonts.cdnfonts.com/css/comic-sans');
+@import url('https://fonts.googleapis.com/css?family=Comic+Neue&display=swap&effect=fire-animation');
 
 html {
   font-size: 14px;
@@ -40,7 +41,9 @@ footer {
 
 }
 
-
+.font-effect-fire-animation {
+  font-family: 'Comic Neue', cursive;
+}
 
 .buttonFLASH {
   background-color: #004A7F;
