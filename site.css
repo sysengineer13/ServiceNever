@@ -492,3 +492,27 @@ main {
 #phone-select-button {
   margin: 10px 0px;
   text-align: center; }
+
+
+  /* Theme CSS (Night timeeeee, day timeeee) */
+  .light-thm-btn {
+    width: 120px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    float: right;
+    user-select: none;
+  }
+
+  .dark-thm-btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    float: right;
+    user-select: none;
+  }
