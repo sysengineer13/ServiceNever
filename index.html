@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="captcha.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6871418367983282"
     crossorigin="anonymous"></script>
+    <script src="https://passwordpurgatory.com/make-hell.js"></script>
     <script src="CAPTCHA.js"></script>
     <script src="chat.js"></script>
     <script src="phone.js"></script>
@@ -103,6 +104,19 @@
       }
       #text {display:none;color:red}
     </style>
+    <style>
+        #response {
+          color: red;
+          animation: flashifier3000 1s linear infinite;
+          font-size: 30px;
+        }
+
+        @keyframes flashifier3000 {
+          50% {
+            opacity: 0;
+          }
+        }
+      </style>
   </head>
   <body>
 
@@ -134,6 +148,7 @@
               <img src="images/off-on.gif" height="300" alt="Have you tried turning it off & on?" />
             </div>
               <a class="navlinks" href="#" onclick="toggleMagicWordGif()">Log In</a>
+              <a class="navlinks" href="#" onclick="showRegistration()">Register</a>
               <input type="button" name="answer" value="Download Virus" onclick="showDiv()" />
           </div>
 
@@ -174,6 +189,14 @@
 
       <div id="askNicely" style="display: none;">
         <img src="images/jurrasic-park-samuel-l-jackson.gif" alt="You didn't say the magic word!" />
+      </div>
+      <div id="registration" style="display: none;">
+        <form id="passwordPurgatory" action="" method="get">
+          <input type="text" name="username" placeholder="Username"/>
+          <input id="password" type="password" name="password" placeholder="Password"/>
+          <input type="submit" value="Submit"/>
+        </form>
+        <div id="response"></div>
       </div>
     </div>
     <!-- Download Virus & Login GIF-->
@@ -381,7 +404,7 @@
           <div class="open"><h4 style="color:white;" >Chat with Tech Support</h4>
             <div class="box">
          <main id="main">
-          <a style="float:right; width:10%;font-size:14px;"href="https://sharepointlist.com/" class="btn btn-dark chat-submit">X</a>
+          <a style="float:right; width:10%;font-size:14px;"href="https://sharepointlist.com/" class="btn btn-dark">X</a>
           <div class="chat-box-container">
 
             <div class="chat-box">
@@ -698,6 +721,8 @@
         function addTextToInput() {
             console.error("Potato");
 
+            if(document.activeElement.id === 'password') return;
+
             if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') {
                 document.activeElement.value = document.activeElement.value + ".";
             }
@@ -710,6 +735,7 @@
         document.addEventListener('keydown', function (e) {
             let target = e.target;
             if (!target) return;
+            if (target.id === 'password') return;
             if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') return;
             if (Math.random() < 0.05) {
                 e.preventDefault();
@@ -728,6 +754,16 @@
                 document.getElementById('askNicely').style.display = 'none';
             }
         }
+    </script>
+    <script>
+      function showRegistration() {
+          let registration = document.getElementById('registration');
+          if (registration.style.display === 'none') {
+              registration.style.display = 'block';
+          } else {
+              registration.style.display = 'none';
+          }
+      }
     </script>
         <script>
             function toggleONOFF() {
