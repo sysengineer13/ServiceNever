@@ -492,3 +492,24 @@ main {
 #phone-select-button {
   margin: 10px 0px;
   text-align: center; }
+
+.input-align {
+  display: flex;
+  width: 110px;
+  margin-top: 5px;
+}
+
+.input-group {
+  display: inline-block;
+  width: fit-content;
+  margin-right: 0px;
+}
+
+.input-group input{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.input-group label{
+  width: fit-content;
+}
