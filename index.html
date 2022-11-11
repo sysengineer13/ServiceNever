@@ -262,14 +262,9 @@
         <br />
 
         <label for="restart">Have tried turning it off and on again?</label><br>
-        <div>
-          <label>
-              <input type="checkbox" name="colorCheckbox"
-                     value="Yes"> Yes</label>
-          <label>
-              <input type="checkbox" name="colorCheckbox"
-                     value="No"> No</label>
-
+        <div class="input-align">
+            <div class="input-group"><label><input type="checkbox" name="colorCheckbox" value="Yes">Yes</label></div>
+            <div class="input-group"><label><input type="checkbox" name="colorCheckbox" value="No">No</label></div>
       </div>
       <div class="Yes selectt">
         <iframe src="https://giphy.com/embed/WZOffTa9X1FZe" width="470" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
@@ -289,11 +284,37 @@
 
 
 
-        <br />
-        <label for="problem">Description of Problem:</label>
-        <br />
-        <textarea class="ComplaintBox" title="Description of Problem:" id="problem" name="problem" rows="4" cols="50"></textarea>
-        <br>
+    <br />
+    <label for="problem">Description of Problem:</label>
+    <br />
+    <textarea class="ComplaintBox" title="Description of Problem:" id="problem" name="problem" rows="4" cols="50"></textarea>
+    <br />
+    <br />
+    <label for "verified">Have we &#10024;<img src=".\images\tw-verified.png" height="15px"/> verified <img src=".\images\tw-verified.png"  height="15px"/>&#10024; your account? (<b>$8</b>)</label>
+    <div class="input-align">
+        <div class="input-group"><label><input type="checkbox" name="vf-yes" value="vf-yes" onclick="veriYes()" id="vf-yes">Yes</label></div>
+        <div class="input-group"><label><input type="checkbox" name="vf-no" value="vf-no" onclick="veriNo()"  id="vf-no">No</label></div>
+    </div>
+    <script>
+        function veriYes() {
+            if (document.getElementById("vf-yes").checked){
+                alert("sorry, we can only accept tickets from \"official\" accounts");
+                document.getElementById("vf-yes").checked = false;
+            } else {
+                // do nothing
+            };
+        };
+        function veriNo() {
+            if (document.getElementById("vf-no").checked){
+            alert("sorry, we can't accept tickets from unverified users");
+            document.getElementById("vf-no").checked = false;
+            } else{
+                //do nothing
+            };
+        };
+    </script>
+    <br />
+    <br />
 <script></script>
 
    <!-- Submit a Ticket Form: Left Side -->
