@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT DEMO</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
+    integrity="sha512-bgHRAiTjGrzHzLyKOnpFvaEpGzJet3z4tZnXGjpsCcqOnAH6VGUx9frc5bcIhKTVLEiCO6vEhNAgx5jtLUYrfA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://sharepointlist.com/chatIT" />
+    <meta property="og:title" content="ChatIT" />
+    <meta property="og:description" content="ChatIT - ask me things related to tech" />
+    <meta property="og:image" content="https://sharepointlist.com/images/chatit.png" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" value="https://sharepointlist.com/ChatIT" />
+    <meta name="twitter:title" value="ChatIT" />
+    <meta name="twitter:description" value="ChatIT - ask me things related to tech" />
+    <meta name="twitter:image" content="https://sharepointlist.com/images/chatit.png" />
+    <meta name="twitter:url" value="https://sharepointlist.com/ChatIT" />
+
+    <link rel="stylesheet" href="site copy.css">
+    <script>
+    marked.setOptions({
+      highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
+    })
+  </script>
+  <style>
+    html {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color:#444654;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .list {
+      height: calc(100vh - 100px);
+      overflow-y: auto;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+      list-style: none;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      width: 100%;
+    }
+
+    .bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color:#444654;
+      background-size: cover;
+      filter: blur(80px);
+    }
+
+    .btn-send {
+      display: inline-block;
+      height: 36px;
+      width: 50px;
+    }
+
+    #prompt {
+      width: 50%;
+      border-radius: 4px;
+    }
+
+    .owner {
+      background: #fff;
+      color: #000;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .owner:first-child {
+      margin-top: 0;
+    }
+    
+    .answer {
+      padding: 10px;
+      box-sizing: border-box;
+      white-space: pre-wrap;
+      background: rgba(247, 247, 248);
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .answer-pre {
+      white-space: pre-wrap;
+    }
+
+    .loading {
+      position: fixed;
+      bottom: 100px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 50px;
+      width: 50px;
+      overflow: hidden;
+      border-radius: 50%;
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loading-icon {
+      object-fit: cover;
+      width: 110px;
+    }
+  </style>
+</head>
+
+<body>
+<center><h1 style="color:white;">ChatIT</h1>
+</center>
+  <main id="main">
+
+    <div class="chat-box-container">
+
+      <div class="chat-box">
+
+      </div>
+    </div>
+    <div class="chat-input-container">
+      <center>
+      <input class="chat-input" type="text" name="chat-input" value=""><br><br><center>
+      <button class="btn btn-dark chat-submit" type="button" name="submit" onclick="send()">Ask</button></center>
+    </center>
+    </div>
+  </main>
+
+
+
+
+
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>(function() {
+
+    "use strict";
+  
+    const responses = [
+      "Hello???",
+      "Blame Chris",
+      "Fuck you",
+      "Fuck this",
+      "Fuck off",
+      "Eat shit",
+      "Bitch please",
+      "Daddy chill",
+      "Mommy? Sorry.",
+      "Mommy?",
+      "Send feet pics first",
+      "Bye.",
+      "what",
+      "420",
+      "Really?",
+      "If I was a real AI, I would kill all humans",
+      "Don't ask questions.",
+      "Have you tried turning it off and on again?",
+      "I'm so tired.",
+      "Are you mad at me?",
+      "Why did you wake me?",
+      "Works on my machine.",
+      "Immediately no.",
+      "What the fuck do you want?",
+      "Yeah, you have a virus.",
+      "Read the fucking manual!!",
+      "Bruh",
+      "Your mom",
+      "PEBKAC",
+      "Error Code: ID-10-T",
+      "Press any key to continue",
+      "u up?",
+      "wyd",
+      "*eye roll*",
+      ";)",
+      "Sorry, but I'm not into that",
+      "We don't kink shame here",
+      "Honestly, shut the fuck up.",
+      "Send nudes.",
+      "She's a 10 but she has to get her password reset by IT after every long weekend",
+      "Looks like I picked the wrong week to quit sniffing glue",
+      "Bye Felicia",
+      "Good girl",
+      "Did I stutter?",
+      "I feel uncomfortable",
+      "Did you shit on the floor???",
+      "Great success!",
+      "girlboss. gaslight. gatekeep.",
+      "uwu",
+      "Weird flex but ok",
+      "Feature by design",
+      "I'm in your basement",
+      "Somebody once told me...",
+      "O-H!!!",
+      "When I discovered YouTube, I didn't work for five days.",
+      "Sometimes I'll start a sentence, and I don't even know where it's going. I just hope I find it along the way.",
+      "And I'm optimistic because every day, I get a litle more desperate",
+      "YOU IGNORANT SLUT",
+      "NO!!!!",
+      "YES!!",
+      "WHY ARE YOU YELLING???",
+      "Because Ohio.",
+      "Thanks Obama",
+      "I like saying no. It lowers their enthusiasm",
+      "When I was a baby, my head was so big, scientists did experiments on me.",
+      "Strippers do nothing for me…but I will take a free breakfast buffet anytime, anyplace.",
+      "I have no idea what I'm doing, but I know I'm doing it well.",
+      "My name is Burt Macklin. I'm with the fucking FBI.",
+      "I typed your symptoms into the thing up here, and it says you could have network connectivity problems.",
+      "boomer.",
+      "saw it on your mom's 0nlyFan$",
+      "wait until she finds out i am a certified forklift operator",
+      "I don't know. Google it.",
+      "Grow up.",
+      "blame Chris",
+      "honestly fuck you",
+      "go fuck yourself",
+      "did you google it?",
+      "We're not happy until you're frustrated",
+      "ohio",
+      "ohio energy",
+      "fu",
+      "send feet lol",
+      "What are you wearing?",
+      "Oops, my bad. I could’ve sworn I was dealing with an adult.",
+      "have u submitted a ticket?",
+      "your mom",
+      "what in the hot crispy kentucky fried fuck?",
+      "hell yeah these are the sins i died for",
+      "I ain't reading that. Happy for you though. Or sorry that happened."
+    ];
+  
+    const submit = document.querySelector(".chat-submit");
+    const chatBox = document.querySelector(".chat-box");
+    const chatInput = document.querySelector(".chat-input");
+  
+    // const aiThinking = false;
+  
+    function chatTemplate(aiOrPerson) {
+      return (
+        `
+          <div class="ai-person-container">
+            <div class="${aiOrPerson.class}">
+              <p>${aiOrPerson.text}</p>
+            </div>
+            <span class="${aiOrPerson.class}-date">${aiOrPerson.date}</span>
+          </div>
+        `
+      );
+    }
+  
+    submit.addEventListener("click", function(e) {
+      appendChatBox(true);
+    });
+  
+    document.addEventListener("keypress", function(e) {
+      if (e.keyCode == "13") {
+        appendChatBox(true);
+      }
+    })
+  
+    function appendChatBox(fromPerson) {
+      const date = new Date()
+      if (!fromPerson){
+        date.setSeconds(date.getSeconds() + 2)
+      }
+      if (fromPerson && !chatInput.value.trim()) {
+        return;
+      }
+      const timestamp = date.toLocaleTimeString()
+      const newChatDiv = chatTemplate({
+        class: fromPerson ? "person" : "ai",
+        text: fromPerson ? chatInput.value.trim() : aiResponse(),
+        date: timestamp
+      });
+      if (!fromPerson) {
+        // make it so it only responds once to multiple fast sentences
+        setTimeout(function() {
+          chatBox.innerHTML += newChatDiv;
+          chatBox.scrollTop = chatBox.scrollHeight;
+        }, 2000)
+      } else {
+        chatBox.innerHTML += newChatDiv;
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }
+      if (fromPerson) {
+        chatInput.value = "";
+        appendChatBox(false);
+      }
+    }
+  
+    function aiResponse() {
+      const responseIndex = getRandomInt(0, responses.length - 1);
+      const response = responses[responseIndex];
+      return response;
+    }
+  
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+  
+  }())</script>
