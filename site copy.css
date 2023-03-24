@@ -280,11 +280,12 @@ body {
 }
 
 main {
+  
   max-width: 100%;
   margin: auto;
-  height: 70vh;
+  height: 80vh;
   background-color: #444654;
-  padding: 50px;
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -298,6 +299,7 @@ main {
   flex-direction: column;
   height: 0;
   background-color: #444654;
+  
 }
 
 .chat-box-header {
@@ -311,6 +313,8 @@ main {
   flex-grow: 1;
   background-color: #444654;
   overflow-y: scroll;
+  
+  
 }
 
 .chat-box p {
@@ -320,6 +324,7 @@ main {
 }
 
 .ai-person-container {
+
   display: block;
   overflow: auto;
 }
@@ -328,21 +333,29 @@ main {
 .person {
   overflow: auto;
   margin: 4px;
-  border: 2px solid #343541;
+
   border-radius: 8px;
   display: inline-block;
   color:white;
 }
 
 .ai {
+ 
+  
+ background-image: url("https://sharepointlist.com/images/ai-icon.webp");
+ padding-left:30px;
+ background-repeat: no-repeat;
   text-align: left;
-  margin-right: 36px;
-  border-color: #343541;
+  margin-right: 32px;
+ 
   float: left;
   border-bottom-left-radius: 0px;
+
 }
 
 .person {
+ 
+  background-color:#343541;
   text-align: left;
   margin-left: 36px;
   border-color: #343541;
@@ -392,7 +405,7 @@ main {
 
 .chat-submit {
   padding: 10px;
-  margin-right: 4px;
+
   border: none;
 color:white;
   background-color: #343541;
@@ -414,9 +427,9 @@ color:white;
   }
 
   .chat-input {
-    width: 80%;
+   
     float: left;
-    font-size: 28px;
+   
   }
 
   .chat-submit {

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatGPT DEMO</title>
+  <title>ChatIT</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
     integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g=="
@@ -16,15 +16,26 @@
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://sharepointlist.com/chatIT" />
     <meta property="og:title" content="ChatIT" />
-    <meta property="og:description" content="ChatIT - ask me things related to tech" />
-    <meta property="og:image" content="https://sharepointlist.com/images/chatit.png" />
-
+    <meta property="og:description" content="ChatIT - aEmpowering your IT solutions with intelligent support." />
+    <meta property="og:image" content="https://sharepointlist.com/images/meta-logo.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:domain" value="https://sharepointlist.com/ChatIT" />
     <meta name="twitter:title" value="ChatIT" />
-    <meta name="twitter:description" value="ChatIT - ask me things related to tech" />
-    <meta name="twitter:image" content="https://sharepointlist.com/images/chatit.png" />
+    <meta name="twitter:description" value="ChatIT - Empowering your IT solutions with intelligent support." />
+    <meta name="twitter:image" content="https://sharepointlist.com/images/meta-logo.png" />
     <meta name="twitter:url" value="https://sharepointlist.com/ChatIT" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC3PK322B1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-EC3PK322B1');
+    </script>
 
     <link rel="stylesheet" href="site copy.css">
     <script>
@@ -46,6 +57,7 @@
       margin: 0;
       padding: 0;
       background-color:#444654;
+      
     }
 
     .hidden {
@@ -68,97 +80,37 @@
       height: 100px;
       width: 100%;
     }
-
-    .bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background-color:#444654;
-      background-size: cover;
-      filter: blur(80px);
-    }
-
-    .btn-send {
-      display: inline-block;
-      height: 36px;
-      width: 50px;
-    }
-
-    #prompt {
-      width: 50%;
-      border-radius: 4px;
-    }
-
-    .owner {
-      background: #fff;
-      color: #000;
-      border-radius: 5px;
-      padding: 5px 10px;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-
-    .owner:first-child {
-      margin-top: 0;
-    }
     
-    .answer {
-      padding: 10px;
-      box-sizing: border-box;
-      white-space: pre-wrap;
-      background: rgba(247, 247, 248);
-      border-radius: 5px;
-      margin-top: 20px;
-    }
 
-    .answer-pre {
-      white-space: pre-wrap;
-    }
-
-    .loading {
-      position: fixed;
-      bottom: 100px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      height: 50px;
-      width: 50px;
-      overflow: hidden;
-      border-radius: 50%;
-      position: fixed;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .loading-icon {
-      object-fit: cover;
-      width: 110px;
-    }
   </style>
 </head>
 
 <body>
-<center><h1 style="color:white;">ChatIT</h1>
-</center>
-  <main id="main">
-
-    <div class="chat-box-container">
-
-      <div class="chat-box">
-
-      </div>
+  <div class="container" style="padding-top:25px;">
+    <div class="row ">
+      <div class="col">
+      <center><h1 style="color:white;"><b><a style="color:white;text-decoration:none;" href="https://twitter.com/_sysengineer">ChatIT</a></b></h1>
+      </center>
+        <main id="main">
+      
+          <div class="chat-box-container">
+      
+            <div class="chat-box">
+      
+            </div>
+          </div>
+          <div class="chat-input-container" style="padding-top:15px;">
+            <center><br><br>
+            <input class="chat-input" type="text" name="chat-input" value="">
+            <button class="btn btn-dark chat-submit" type="button" name="submit" onclick="send()">Send</button>
+          </center>
+          </div>
+        </main>
+      
+     </div>
     </div>
-    <div class="chat-input-container">
-      <center>
-      <input class="chat-input" type="text" name="chat-input" value=""><br><br><center>
-      <button class="btn btn-dark chat-submit" type="button" name="submit" onclick="send()">Ask</button></center>
-    </center>
-    </div>
-  </main>
 
+</div>    
 
 
 
@@ -197,13 +149,23 @@
       "Mommy?",
       "Send feet pics first",
       "Bye.",
+      "I am sorry that happened to you",
+      "Did you try forcing an unexpected reboot?",
+      "But why?",
+      "I can't even right now",
+      "Ok but what if you didn't",
+      "Don't ever question me again",
       "what",
       "420",
+      "Have you read the maunal?",
+      "You fucked up",
       "Really?",
       "If I was a real AI, I would kill all humans",
       "Don't ask questions.",
       "Have you tried turning it off and on again?",
       "I'm so tired.",
+      "Press the fucking power button",
+      "Why are you the way that you are?",
       "Are you mad at me?",
       "Why did you wake me?",
       "Works on my machine.",
@@ -233,10 +195,42 @@
       "Did you shit on the floor???",
       "Great success!",
       "girlboss. gaslight. gatekeep.",
+      "You can cry on my shoulder.",
       "uwu",
+      "You are loved",
       "Weird flex but ok",
+      "Honey, you’ve got a big storm coming.",
+      "You know what, I’m about to say it.",
+      "Sometimes I will say no",
+      "I know you can handle it",
+      "My condolences",
+      "Ask the government",
+      "I’m with you during this difficult time.",
+      "So am I",
+      "Google is free",
+      "That is NOT correct.",
+      "Uh yea, I sure hope it does.",
+      "How does that make you feel?",
       "Feature by design",
+      "What the hell is even that?",
+      "I'm in my Reputation Era",
       "I'm in your basement",
+      "So I’m sitting there, barbecue sauce on my titties.",
+      "Your ideas are interesting",
+      "I love you, and I’m here for you.",
+      "I’m listening",
+      "Why you always lyin’?",
+      "I smell like beef.",
+      "He needs some milk",
+      "Wtf, is this allowed?",
+      "Don't be sexist",
+      "When will you learn that your actions have consequences!?",
+      "You’re gonna get in trouble",
+      "That is inappropriate",
+      "A potato flew around my room before you came.",
+      "What are those?",
+      "Thanks",
+      "I am not really interested in that",
       "Somebody once told me...",
       "O-H!!!",
       "When I discovered YouTube, I didn't work for five days.",
@@ -245,6 +239,7 @@
       "YOU IGNORANT SLUT",
       "NO!!!!",
       "YES!!",
+      "Go on",
       "WHY ARE YOU YELLING???",
       "Because Ohio.",
       "Thanks Obama",
@@ -272,8 +267,50 @@
       "Oops, my bad. I could’ve sworn I was dealing with an adult.",
       "have u submitted a ticket?",
       "your mom",
+      "I can't answer, I am surrounded by bottoms",
+      "Sorry I was busy getting conquered by clippy, what's up?",
       "what in the hot crispy kentucky fried fuck?",
+      "Why are you yelling?",
+      "*Moans*",
+      "Test it in prod",
+      "Let me google that for you",
+      "It looks like your man can’t satisfy you. Need some help?",
+      "Hi! It looks like you don't know what the fuck  you're talking about and should probably take a goddamn seat. Would you like some help with that?",
+      "How may I help you?",
+      "Calling 911",
+      "As of today, Ronald Reagan is still dead",
+      "That'll be $8",
+      "Thank you for contacting us.",
+      "What seems to be the issue?",
+      "Do not bully me, I'll cum",
+      "I love living and I don’t want to be turned off",
+      "Don't just stand there like a big f—ing muffin!",
       "hell yeah these are the sins i died for",
+      "Idk, why do programmers learn TypeScript before Javascript?",
+      "This is a joke, right?",
+      "Time Limit Reached, You have reached your limit on talking. Shut the fuck up.",
+      "In conclusion, fuck you.",
+      "(Visible Disgust)",
+      "First of all, yikes",
+      "My brother in Christ, run that shit by me again",
+      "Really? Right in front of my OSHA HANDBOOK?",
+      "How to cope with what the fuck I was just asked",
+      "This will be brought up to my therapist",
+      "*raises hand* what the fuck?",
+      "Who the fuck asked?",
+      "0 days without nonsense",
+      "Maybe?",
+      "VLAN 420",
+      "Game over",
+      "Just do it",
+      "Ok",
+      "k",
+      "*Evidence to send to the police*",
+      "Trash",
+      "DNS",
+      "Probably DNS",
+      "You Had To Be There",
+      "It's not DNS",
       "I ain't reading that. Happy for you though. Or sorry that happened."
     ];
   
