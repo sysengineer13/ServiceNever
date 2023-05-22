@@ -410,8 +410,8 @@
            <img src="images/800.png" style="width:40%;border:#4CAF50;"/></a>
             </CENTER></br>
          <CENTER>
-       <a href="https://mspgeek.org/?utm_source=sharepointlist.com&utm_medium=ad&utm_campaign=mspgeek&utm_id=MSPgeek">
-        <img src="images/mspgeek.png" style="width:40%"/></a>
+       <a href="https://www.thedailybeast.com/obsessed/how-nathan-fielder-became-the-sexiest-man-on-tv">
+        <img src="images/nathan.webp" style="width:40%"/></a>
          </CENTER></br>
 
          <div class="chat-open">
@@ -427,8 +427,9 @@
           </div>
           <div class="chat-input-container">
             <center>
+
             <input class="chat-input" type="text" name="chat-input" value="">
-            <button class="btn btn-dark chat-submit" type="button" name="submit">Submit</button>
+            <button class="btn btn-dark chat-submit" type="button" name="submit" onclick="send()">Send</button>
           </center>
           </div>
         </main>
@@ -440,6 +441,33 @@
 </div>
 
 </div>
+  <div class="container" style="padding-top:25px;">
+    <div class="row ">
+      <div class="col">
+      <center><h1 style="color:white;"><b><a style="color:white;text-decoration:none;" href="https://twitter.com/_sysengineer">ChatIT</a></b></h1>
+      </center>
+        <main id="main">
+      
+          <div class="chat-box-container">
+      
+            <div class="chat-box">
+      
+            </div>
+          </div>
+          <div class="chat-input-container" style="padding-top:15px;">
+            <center><br><br>
+            <input class="chat-input" type="text" name="chat-input" value="">
+            <button class="btn btn-dark chat-submit" type="button" name="submit" >Send</button>
+          </center>
+          </div>
+        </main>
+      
+     </div>
+    </div>
+
+</div>    
+
+
  <!-- Side -->
 
 
@@ -457,8 +485,15 @@
 
 </footer>
  <!-- Footer -->
+ <script>
+  marked.setOptions({
+    highlight: function (code) {
+      return hljs.highlightAuto(code).value;
+    }
+  })
+</script>
 
- <script>(function() {
+<script>(function() {
 
   "use strict";
 
@@ -475,13 +510,23 @@
     "Mommy?",
     "Send feet pics first",
     "Bye.",
+    "I am sorry that happened to you",
+    "Did you try forcing an unexpected reboot?",
+    "But why?",
+    "I can't even right now",
+    "Ok but what if you didn't",
+    "Don't ever question me again",
     "what",
     "420",
+    "Have you read the maunal?",
+    "You fucked up",
     "Really?",
     "If I was a real AI, I would kill all humans",
     "Don't ask questions.",
     "Have you tried turning it off and on again?",
     "I'm so tired.",
+    "Press the fucking power button",
+    "Why are you the way that you are?",
     "Are you mad at me?",
     "Why did you wake me?",
     "Works on my machine.",
@@ -510,35 +555,121 @@
     "I feel uncomfortable",
     "Did you shit on the floor???",
     "Great success!",
-    "girlboss. gaslight. gatekeep.",
+    "Girlboss. gaslight. gatekeep.",
+    "You can cry on my shoulder.",
     "uwu",
+    "Did you call 0118999881999119725....3",
+    "You are loved",
     "Weird flex but ok",
+    "Honey, you’ve got a big storm coming.",
+    "You know what, I’m about to say it.",
+    "Sometimes I will say no",
+    "I know you can handle it",
+    "My condolences",
+    "Ask the government",
+    "I’m with you during this difficult time.",
+    "So am I",
+    "Google is free",
+    "That is NOT correct.",
+    "Uh yea, I sure hope it does.",
+    "How does that make you feel?",
     "Feature by design",
+    "What the hell is even that?",
+    "I'm in my Reputation Era",
     "I'm in your basement",
+    "So I’m sitting there, barbecue sauce on my titties.",
+    "Your ideas are interesting",
+    "I love you, and I’m here for you.",
+    "I’m listening",
+    "Why you always lyin’?",
+    "I smell like beef.",
+    "He needs some milk",
+    "Wtf, is this allowed?",
+    "Don't be sexist",
+    "When will you learn that your actions have consequences!?",
+    "You’re gonna get in trouble",
+    "That is inappropriate",
+    "A potato flew around my room before you came.",
+    "What are those?",
+    "Thanks",
+    "I am not really interested in that",
     "Somebody once told me...",
     "O-H!!!",
-    "When I discovered YouTube, I didn't work for five days.",
-    "Sometimes I'll start a sentence, and I don't even know where it's going. I just hope I find it along the way.",
     "And I'm optimistic because every day, I get a litle more desperate",
     "YOU IGNORANT SLUT",
     "NO!!!!",
     "YES!!",
+    "Go on",
     "WHY ARE YOU YELLING???",
     "Because Ohio.",
     "Thanks Obama",
     "I like saying no. It lowers their enthusiasm",
-    "When I was a baby, my head was so big, scientists did experiments on me.",
-    "Strippers do nothing for me…but I will take a free breakfast buffet anytime, anyplace.",
     "I have no idea what I'm doing, but I know I'm doing it well.",
-    "My name is Burt Macklin. I'm with the fucking FBI.",
-    "I typed your symptoms into the thing up here, and it says you could have network connectivity problems.",
-    "boomer.",
-    "saw it on your mom's 0nlyFan$",
+    "Boomer.",
+    "Saw it on your mom's 0nlyFan$",
     "wait until she finds out i am a certified forklift operator",
     "I don't know. Google it.",
     "Grow up.",
-    "blame Chris",
-    "What are you wearing?"
+    "Blame Chris",
+    "Honestly fuck you",
+    "Go fuck yourself",
+    "Did you google it?",
+    "We're not happy until you're frustrated",
+    "ohio",
+    "ohio energy",
+    "fu",
+    "Send feet lol",
+    "What are you wearing?",
+    "Oops, my bad. I could’ve sworn I was dealing with an adult.",
+    "have u submitted a ticket?",
+    "your mom",
+    "I can't answer, I am surrounded by bottoms",
+    "Sorry I was busy getting conquered by clippy, what's up?",
+    "what in the hot crispy kentucky fried fuck?",
+    "Why are you yelling?",
+    "*Moans*",
+    "Test it in prod",
+    "Let me google that for you",
+    "It looks like your man can’t satisfy you. Need some help?",
+    "Hi! It looks like you don't know what the fuck  you're talking about and should probably take a goddamn seat. Would you like some help with that?",
+    "How may I help you?",
+    "Calling 911",
+    "As of today, Ronald Reagan is still dead",
+    "That'll be $8",
+    "Thank you for contacting us.",
+    "What seems to be the issue?",
+    "Do not bully me, I'll cum",
+    "I love living and I don’t want to be turned off",
+    "Don't just stand there like a big f—ing muffin!",
+    "hell yeah these are the sins i died for",
+    "Idk, why do programmers learn TypeScript before Javascript?",
+    "This is a joke, right?",
+    "Time Limit Reached, You have reached your limit on talking. Shut the fuck up.",
+    "In conclusion, fuck you.",
+    "(Visible Disgust)",
+    "First of all, yikes",
+    "My brother in Christ, run that shit by me again",
+    "Really? Right in front of my OSHA HANDBOOK?",
+    "How to cope with what the fuck I was just asked",
+    "This will be brought up to my therapist",
+    "*raises hand* what the fuck?",
+    "Who the fuck asked?",
+    "0 days without nonsense",
+    "Maybe?",
+    "VLAN 420",
+    "Game over",
+    "Tame me daddy",
+    "Just do it",
+    "Ok",
+    "k",
+    "*Evidence to send to the police*",
+    "Trash",
+    "DNS",
+    "Probably DNS",
+    "You Had To Be There",
+    "Don't shit on my puss and tell me I'm queefing -Judge Judy",
+    "It's not DNS",
+    "I ain't reading that. Happy for you though. Or sorry that happened."
   ];
 
   const submit = document.querySelector(".chat-submit");
@@ -611,7 +742,6 @@
   }
 
 }())</script>
-
 
  <script>
   fetch("https://insult.mattbas.org/api/en_corporate/insult.json?who=Our+World+Class+Tech+Experts&plural=on")

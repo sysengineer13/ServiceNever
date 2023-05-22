@@ -387,19 +387,18 @@ main {
 .chat-input:focus {
   outline: 0;
 }
-
 .chat-submit {
-  padding: 2px 2px 2px 2px;
-  margin-right: 4px;
-  border: none;
+  padding: 10px;
 
-  background-color: #69AAFF;
+  border: none;
+color:white;
+  background-color: #343541;
   font-size: 18px;
 }
 
 .chat-submit:hover {
   cursor: pointer;
-  background-color: #80BBFF;
+  background-color: black;
 }
 
 .chat-submit:focus {
