@@ -1,4 +1,4 @@
-# ServiceNever
+![alt text](https://github.com/christianjclark/servicenever/blob/main/servicenever.png?raw=true)<br>
 ServiceNever is a help desk ticketing system. Service No-, I mean Never, is just as useful as a SharePoint list. 
 
 Designed by IT for IT.
